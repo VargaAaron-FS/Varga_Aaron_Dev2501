@@ -6,6 +6,6 @@ Web Development @ Full Sail University
 
 ## Application
 
-### 01_Components - Components created for application.
+### 01_Components - Components created for application
 
 ### 02_
