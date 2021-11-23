@@ -2,7 +2,7 @@
 
 Web Development @ Full Sail University
 
-Aaron Varga
+[Aaron Varga](https://www.iamaaronvarga.com)
 
 ## Application
 
