@@ -1,3 +1,3 @@
 # Interface Programming
 
-Web Development | Full Sail University
+Web Development @ Full Sail University
