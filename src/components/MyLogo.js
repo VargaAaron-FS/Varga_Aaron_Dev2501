@@ -14,6 +14,5 @@ const styles = {
     height: "50px",
     cursor: "pointer",
     display: "flex",
-    padding: "1rem",
   },
 };
