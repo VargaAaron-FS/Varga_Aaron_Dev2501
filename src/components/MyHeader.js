@@ -70,5 +70,12 @@ const styles = {
     display: "flex",
     alignItems: "center",
   },
-  rightIcons: {},
+  rightIcons: {
+    margin: "0 .5rem 0 0",
+    backgroundColor: "transparent",
+    border: "none",
+    color: "white",
+    cursor: "pointer",
+    fontSize: "1rem",
+  },
 };
