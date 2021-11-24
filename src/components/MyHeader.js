@@ -1,9 +1,13 @@
 import React from "react";
+
+// Logo
 import MyLogo from "./MyLogo";
-// import MyIcons from "./MyIcons";
-import { FaSearch, FaEnvelope, FaBell } from "react-icons/fa";
 import LogoIcon from "../img/av-logo.svg";
 
+// import MyIcons from "./MyIcons";
+import { FaSearch, FaEnvelope, FaBell } from "react-icons/fa";
+
+// Avatar
 import ImageUrl from "../img/icons8-user-male.svg";
 import MyAvatar from "./MyAvatar";
 
@@ -63,9 +67,25 @@ const styles = {
     margin: "0",
     padding: "0",
   },
-  searchContainer: {},
-  inputIcon: {},
-  inputWithIcon: {},
+  searchContainer: {
+    display: "flex",
+  },
+  inputIcon: {
+    color: "#1F2937",
+    backgroundColor: "white",
+    borderRadius: ".5rem 0 0 .5rem",
+    padding: ".5rem 1rem",
+    display: "flex",
+    alignItems: "center",
+    borderRight: "2px solid #eee",
+    cursor: "pointer",
+  },
+  inputWithIcon: {
+    padding: ".5rem 1rem",
+    borderRadius: "0 .5rem .5rem 0",
+    border: "none",
+    fontFamily: "Poppins",
+  },
   rightSide: {
     display: "flex",
     alignItems: "center",
