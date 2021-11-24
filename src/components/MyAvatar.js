@@ -11,7 +11,7 @@ export default MyAvatar;
 
 const styles = {
   myAvatar: {
-    height: "32px",
+    height: "calc(32px - .5rem)", // calc to offset padding
     cursor: "pointer",
     borderRadius: "50%",
     backgroundColor: "white",

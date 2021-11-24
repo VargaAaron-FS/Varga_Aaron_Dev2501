@@ -73,16 +73,17 @@ const styles = {
   inputIcon: {
     color: "#1F2937",
     backgroundColor: "white",
-    borderRadius: ".5rem 0 0 .5rem",
-    padding: ".5rem 1rem",
+    borderRadius: ".25rem 0 0 .25rem",
+    padding: ".5rem .75rem",
     display: "flex",
     alignItems: "center",
     borderRight: "2px solid #eee",
     cursor: "pointer",
+    fontSize: "1rem",
   },
   inputWithIcon: {
     padding: ".5rem 1rem",
-    borderRadius: "0 .5rem .5rem 0",
+    borderRadius: "0 .25rem .25rem 0",
     border: "none",
     fontFamily: "Poppins",
   },
@@ -97,5 +98,6 @@ const styles = {
     color: "white",
     cursor: "pointer",
     fontSize: "1rem",
+    display: "flex",
   },
 };
