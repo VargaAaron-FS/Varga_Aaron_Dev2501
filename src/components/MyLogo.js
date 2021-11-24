@@ -11,7 +11,9 @@ export default MyLogo;
 
 const styles = {
   myLogo: {
-    height: "75px",
+    height: "50px",
     cursor: "pointer",
+    display: "flex",
+    padding: "1rem",
   },
 };

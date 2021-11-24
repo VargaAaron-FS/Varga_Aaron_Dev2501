@@ -19,12 +19,12 @@ class App extends Component {
       <div>
         <MyHeader />
         <div style={styles.container}>
-          <div style={styles.box}>
+          <div style={styles.box1}>
             <h1>Avatar Example</h1>
             <MyAvatar AvatarIcon={AvatarIcon} />
             <img src={AvatarIcon} alt="Logo" style={styles.logo} />
           </div>
-          <div style={styles.box}>
+          <div style={styles.box2}>
             <h1>Icons Example</h1>
             <p style={styles.icons}>
               {/* Icons here! */}
@@ -54,10 +54,14 @@ const styles = {
     padding: "1rem",
     margin: "0 auto",
   },
-  box: {
+  box1: {
     padding: "2rem",
     backgroundColor: "#eee",
     margin: "0 0 1rem 0",
+  },
+  box2: {
+    padding: "2rem",
+    backgroundColor: "#eee",
   },
   icons: {
     fontSize: "2rem",
