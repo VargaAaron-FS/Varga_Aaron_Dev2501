@@ -4,6 +4,9 @@ import MyLogo from "./MyLogo";
 import { FaSearch, FaEnvelope, FaBell } from "react-icons/fa";
 import LogoIcon from "../img/av-logo.svg";
 
+import ImageUrl from "../img/icons8-user-male.svg";
+import MyAvatar from "./MyAvatar";
+
 const MyHeader = (props) => {
   return (
     <header style={styles.header}>
@@ -18,7 +21,11 @@ const MyHeader = (props) => {
           <span style={styles.inputIcon}>
             <FaSearch />
           </span>
-          <input type="text" style={styles.inputWithIcon} placeholder="Search" />
+          <input
+            type="text"
+            style={styles.inputWithIcon}
+            placeholder="Search"
+          />
         </div>
         {/* Need a right side icon nav/menu */}
         <div style={styles.rightSide}>
@@ -29,6 +36,7 @@ const MyHeader = (props) => {
             <FaBell />
           </button>
           {/* Add avatar */}
+          <MyAvatar AvatarIcon={ImageUrl} />
         </div>
       </div>
     </header>
@@ -58,6 +66,9 @@ const styles = {
   searchContainer: {},
   inputIcon: {},
   inputWithIcon: {},
-  rightSide: {},
+  rightSide: {
+    display: "flex",
+    alignItems: "center",
+  },
   rightIcons: {},
 };

@@ -11,8 +11,10 @@ export default MyAvatar;
 
 const styles = {
   myAvatar: {
-    height: "75px",
+    height: "32px",
     cursor: "pointer",
     borderRadius: "50%",
+    backgroundColor: "white",
+    padding: ".25rem",
   },
 };
