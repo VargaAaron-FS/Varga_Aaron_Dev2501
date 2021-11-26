@@ -11,7 +11,6 @@ import MyHeader from "./components/MyHeader";
 
 // React icons
 // https://react-icons.github.io/react-icons/#/
-// import { Fa500Px, FaAirbnb, FaApple } from "react-icons/fa";
 
 class App extends Component {
   render() {

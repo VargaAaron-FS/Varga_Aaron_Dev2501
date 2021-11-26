@@ -22,7 +22,7 @@ const MyHeader = (props) => {
         </div>
         {/* Need a search feature */}
         <div style={styles.searchContainer}>
-          <span style={styles.inputIcon}>
+          <span className="inputIconBtn" style={styles.inputIcon}>
             <FaSearch />
           </span>
           <input
@@ -66,6 +66,8 @@ const styles = {
   logo: {
     margin: "0",
     padding: "0",
+    display: "flex",
+    alignItems: "center",
   },
   searchContainer: {
     display: "flex",

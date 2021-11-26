@@ -3,7 +3,10 @@ import React from "react";
 // Dummy Component
 const MyLogo = (props) => {
   return (
-    <img src={props.LogoIcon} alt={props.LogoIcon} style={styles.myLogo} />
+    <div style={styles.myLogo}>
+      <img src={props.LogoIcon} alt={props.LogoIcon} />
+      <span style={styles.logoText}>UI</span>
+    </div>
   );
 };
 
@@ -14,5 +17,11 @@ const styles = {
     height: "32px",
     cursor: "pointer",
     display: "flex",
+  },
+  logoText: {
+    color: "white",
+    fontWeight: "400",
+    fontSize: "1.25rem",
+    marginLeft: ".25rem",
   },
 };
