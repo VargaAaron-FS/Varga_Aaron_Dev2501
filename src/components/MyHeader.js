@@ -11,6 +11,15 @@ import { FaSearch, FaEnvelope, FaBell } from "react-icons/fa";
 import ImageUrl from "../img/icons8-user-male.svg";
 import MyAvatar from "./MyAvatar";
 
+// Search button click event
+const handleSearchClick = () => {
+  if (document.querySelector(".searchInputField").value === "") {
+    document.querySelector(".searchInputField").focus();
+  } else {
+    // Perform search on document.querySelector(".searchInputField").value
+  }
+};
+
 const MyHeader = (props) => {
   return (
     <header style={styles.header}>
@@ -22,10 +31,16 @@ const MyHeader = (props) => {
         </div>
         {/* Need a search feature */}
         <div style={styles.searchContainer}>
-          <button type="button" style={styles.inputIcon}>
+          <button
+            type="button"
+            className="searchBtn"
+            style={styles.inputIcon}
+            onClick={handleSearchClick}
+          >
             <FaSearch />
           </button>
           <input
+            className="searchInputField"
             type="text"
             style={styles.inputWithIcon}
             placeholder="Search"
