@@ -72,12 +72,11 @@ const styles = {
   },
   inputIcon: {
     color: "#1F2937",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     borderRadius: ".25rem 0 0 .25rem",
     padding: ".5rem .75rem",
     display: "flex",
     alignItems: "center",
-    borderRight: "2px solid #eee",
     cursor: "pointer",
     fontSize: "1rem",
   },
@@ -86,6 +85,7 @@ const styles = {
     borderRadius: "0 .25rem .25rem 0",
     border: "none",
     fontFamily: "Poppins",
+    boxShadow: "inset 0px 0px 5px rgba(0,0,0,0.25)",
   },
   rightSide: {
     display: "flex",
