@@ -22,9 +22,9 @@ const MyHeader = (props) => {
         </div>
         {/* Need a search feature */}
         <div style={styles.searchContainer}>
-          <span className="inputIconBtn" style={styles.inputIcon}>
+          <button type="button" style={styles.inputIcon}>
             <FaSearch />
-          </span>
+          </button>
           <input
             type="text"
             style={styles.inputWithIcon}
@@ -33,10 +33,10 @@ const MyHeader = (props) => {
         </div>
         {/* Need a right side icon nav/menu */}
         <div style={styles.rightSide}>
-          <button style={styles.rightIcons}>
+          <button type="button" style={styles.rightIcons}>
             <FaEnvelope />
           </button>
-          <button style={styles.rightIcons}>
+          <button type="button" style={styles.rightIcons}>
             <FaBell />
           </button>
           {/* Add avatar */}
@@ -81,6 +81,7 @@ const styles = {
     alignItems: "center",
     cursor: "pointer",
     fontSize: "1rem",
+    border: "none",
   },
   inputWithIcon: {
     padding: ".5rem 1rem",
@@ -94,12 +95,13 @@ const styles = {
     alignItems: "center",
   },
   rightIcons: {
-    margin: "0 .5rem 0 0",
+    margin: "0 1rem 0 0",
     backgroundColor: "transparent",
     border: "none",
     color: "white",
     cursor: "pointer",
     fontSize: "1rem",
     display: "flex",
+    padding: "0",
   },
 };
