@@ -49,6 +49,7 @@ const MyHeader = (props) => {
         {/* Need a right side icon nav/menu */}
         <div style={styles.rightSide}>
           <button type="button" style={styles.rightIcons}>
+          <span style={styles.alertCircle}></span>
             <FaBell />
           </button>
           {/* Add avatar */}
@@ -118,5 +119,17 @@ const styles = {
     fontSize: "1rem",
     display: "flex",
     padding: "0",
+    position: "relative",
+  },
+  alertCircle: {
+    borderRadius: "50%",
+    backgroundColor: "#ff0f0f",
+    width: "8px",
+    height: "8px",
+    position: "absolute",
+    right: "-4px",
+    top: "-2px",
+    boxShadow: "0px 0px 3px rgba(0,0,0,1)",
+    border: "1px solid #1F2937",
   },
 };
