@@ -41,7 +41,7 @@ const MyHeader = (props) => {
           </button>
           <input
             className="searchInputField"
-            type="text"
+            type="search"
             style={styles.inputWithIcon}
             placeholder="Search"
           />
@@ -86,6 +86,8 @@ const styles = {
   },
   searchContainer: {
     display: "flex",
+    width: "100%",
+    justifyContent: "center",
   },
   inputIcon: {
     color: "#1F2937",
@@ -104,6 +106,7 @@ const styles = {
     border: "none",
     fontFamily: "Poppins",
     boxShadow: "inset 0px 0px 5px rgba(0,0,0,0.25)",
+    minWidth: "30%",
   },
   rightSide: {
     display: "flex",

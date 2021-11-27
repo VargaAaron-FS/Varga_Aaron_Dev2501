@@ -6,6 +6,9 @@ import ButtonDark from "./components/buttons/ButtonDark";
 import ButtonLight from "./components/buttons/ButtonLight";
 import ButtonLightOutline from "./components/buttons/ButtonLightOutline";
 
+// Forms
+import MyForm from "./components/MyForm";
+
 class App extends Component {
   render() {
     return (
@@ -20,6 +23,9 @@ class App extends Component {
           <div style={styles.whiteBox}>
             <ButtonLightOutline buttonText="Button Light Outline" />
           </div>
+          <div>
+            <MyForm />
+          </div>
         </div>
     );
   }
@@ -27,6 +33,7 @@ class App extends Component {
 
 export default App;
 
+// whiteBox and darkBox just to show buttons
 const styles = {
   whiteBox: {
     padding: "2rem",
