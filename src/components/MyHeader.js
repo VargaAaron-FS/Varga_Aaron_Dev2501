@@ -5,7 +5,7 @@ import MyLogo from "./MyLogo";
 import LogoIcon from "../img/av-logo.svg";
 
 // import MyIcons from "./MyIcons";
-import { FaSearch, FaEnvelope, FaBell } from "react-icons/fa";
+import { FaSearch, FaBell } from "react-icons/fa";
 
 // Avatar
 import ImageUrl from "../img/icons8-user-male.svg";
@@ -48,9 +48,6 @@ const MyHeader = (props) => {
         </div>
         {/* Need a right side icon nav/menu */}
         <div style={styles.rightSide}>
-          <button type="button" style={styles.rightIcons}>
-            <FaEnvelope />
-          </button>
           <button type="button" style={styles.rightIcons}>
             <FaBell />
           </button>
@@ -97,7 +94,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     cursor: "pointer",
-    fontSize: "1rem",
+    fontSize: ".75rem",
     border: "none",
   },
   inputWithIcon: {
