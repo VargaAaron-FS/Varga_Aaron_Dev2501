@@ -21,7 +21,9 @@ const MyForm = (props) => {
         <input type="email" style={styles.input} placeholder="Email" />
         <input type="tel" style={styles.input} placeholder="Phone" />
       </div>
-      <ButtonDark buttonText="Submit" />
+      <div style={styles.buttonContainer}>
+        <ButtonDark buttonText="Submit" />
+      </div>
     </form>
   );
 };
@@ -46,4 +48,8 @@ const styles = {
     border: "2px solid #eee",
     margin: ".5rem",
   },
+  buttonContainer: {
+    display: "inline-block",
+    margin: ".5rem",
+  }
 };
