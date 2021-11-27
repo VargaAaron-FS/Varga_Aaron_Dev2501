@@ -16,7 +16,7 @@ const handleSearchClick = () => {
   if (document.querySelector(".searchInputField").value === "") {
     document.querySelector(".searchInputField").focus();
   } else {
-    // Perform search on document.querySelector(".searchInputField").value
+    // TODO: Perform search on document.querySelector(".searchInputField").value (user's input)
   }
 };
 
@@ -55,7 +55,7 @@ const MyHeader = (props) => {
             <FaBell />
           </button>
           {/* Add avatar */}
-          <MyAvatar AvatarIcon={ImageUrl} />
+          <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
         </div>
       </div>
     </header>
