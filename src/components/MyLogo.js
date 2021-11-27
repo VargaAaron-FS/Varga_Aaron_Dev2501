@@ -3,10 +3,12 @@ import React from "react";
 // Dummy Component
 const MyLogo = (props) => {
   return (
-    <div style={styles.myLogo}>
-      <img src={props.LogoIcon} alt={props.LogoIcon} />
-      <span style={styles.logoText}>UI</span>
-    </div>
+    <a href="../../" style={styles.logoLink}>
+      <div style={styles.myLogo}>
+        <img src={props.LogoIcon} alt={props.LogoIcon} />
+        <span style={styles.logoText}>UI</span>
+      </div>
+    </a>
   );
 };
 
@@ -24,4 +26,7 @@ const styles = {
     fontSize: "1.25rem",
     marginLeft: ".25rem",
   },
+  logoLink: {
+    textDecoration: "none",
+  }
 };

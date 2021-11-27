@@ -14,18 +14,24 @@ class App extends Component {
     return (
         <div>
           <MyHeader />
-          <div style={styles.whiteBox}>
-            <ButtonDark buttonText="Button Dark" />
-          </div>
-          <div style={styles.darkBox}>
-            <ButtonLight buttonText="Button Light" />
-          </div>
-          <div style={styles.whiteBox}>
-            <ButtonLightOutline buttonText="Button Light Outline" />
-          </div>
-          <div>
-            <MyForm />
-          </div>
+          <main>
+            <div style={styles.whiteBox}>
+              <ButtonDark buttonText="Button Dark" />
+            </div>
+            <div style={styles.darkBox}>
+              <ButtonLight buttonText="Button Light" />
+            </div>
+            <div style={styles.whiteBox}>
+              <ButtonLightOutline buttonText="Button Light Outline" />
+            </div>
+            <div>
+              <MyForm />
+            </div>
+            <div>
+              {/* Card Component goes here */}
+            </div>
+          </main>
+          <footer></footer>
         </div>
     );
   }
