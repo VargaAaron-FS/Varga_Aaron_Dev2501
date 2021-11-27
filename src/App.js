@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+
 import MyHeader from "./components/MyHeader";
+import MyAds from "./components/MyAds";
 
 // Buttons
 import ButtonDark from "./components/buttons/ButtonDark";
 import ButtonLight from "./components/buttons/ButtonLight";
-import ButtonLightOutline from "./components/buttons/ButtonLightOutline";
+import ButtonDarkOutlineOnly from "./components/buttons/ButtonDarkOutlineOnly";
+import ButtonLightOutlineOnly from "./components/buttons/ButtonLightOutlineOnly";
 
 // Forms
 import MyForm from "./components/MyForm";
@@ -21,15 +24,16 @@ class App extends Component {
             <div style={styles.darkBox}>
               <ButtonLight buttonText="Button Light" />
             </div>
+            <div style={styles.darkBox}>
+              <ButtonLightOutlineOnly buttonText="Button Light Outline" />
+            </div>
             <div style={styles.whiteBox}>
-              <ButtonLightOutline buttonText="Button Light Outline" />
+              <ButtonDarkOutlineOnly buttonText="Button Light Outline" />
             </div>
             <div>
               <MyForm />
             </div>
-            <div>
-              {/* Card Component goes here */}
-            </div>
+              <MyAds />
           </main>
           <footer></footer>
         </div>

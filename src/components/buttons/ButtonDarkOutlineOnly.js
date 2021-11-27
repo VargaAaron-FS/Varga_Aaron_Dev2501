@@ -1,20 +1,20 @@
 import React from "react";
 
 // Dummy Component
-const ButtonDark = (props) => {
+const ButtonLightOutline = (props) => {
   return <button style={styles.appBtn}>{props.buttonText}</button>;
 };
 
-export default ButtonDark;
+export default ButtonLightOutline;
 
 const styles = {
   appBtn: {
     fontWeight: "700",
     padding: "1rem 2rem",
-    backgroundColor: "#1F2937",
+    backgroundColor: "transparent",
     borderRadius: ".25rem",
     cursor: "pointer",
-    color: "white",
+    color: "#1F2937",
     fontFamily: "Poppins",
     border: "2px solid #1F2937",
   },

@@ -66,6 +66,7 @@ const styles = {
   header: {
     backgroundColor: "#1F2937",
     padding: "1rem 0",
+    boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
   },
   container: {
     padding: "0 1rem",

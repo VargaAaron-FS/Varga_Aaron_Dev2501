@@ -16,6 +16,6 @@ const styles = {
     cursor: "pointer",
     color: "#1F2937",
     fontFamily: "Poppins",
-    border: "none",
+    border: "2px solid white",
   },
 };
