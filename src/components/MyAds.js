@@ -1,8 +1,8 @@
 import React from "react";
 
 // Import buttons
-import ButtonLight from "./buttons/ButtonLight";
-import ButtonLightOutlineOnly from "./buttons/ButtonLightOutlineOnly";
+import ButtonDark from "./buttons/ButtonDark";
+import ButtonDarkOutlineOnly from "./buttons/ButtonDarkOutlineOnly";
 
 // Import icons
 import { FaShare } from "react-icons/fa";
@@ -11,15 +11,13 @@ const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
       <img src={props.adImageUrl} alt={props.adImageAlt} style={styles.adImage} />
-      <h1>My Ad 1</h1>
-      <p>Some text goes here!</p>
-      <div style={styles.buttonContainer}>
-        <ButtonLight buttonText="Learn More" />
-        {/* How do I set it up so I can have the option of having an icon in a button or not?
-        I figured out how to do it, but I need to figure out how to adjust the margin for when
-        the icon is and is not in with the text.
-        */}
-        <ButtonLightOutlineOnly buttonText="Share" iconOption={<FaShare />} />
+      <div style={styles.copyContainer}>
+        <h1 style={styles.h1}>My Ad 1</h1>
+        <p style={styles.paragraphText}>Time for a new phone? Check these out! You might find one you absolutely love!</p>
+        <div style={styles.buttonContainer}>
+          <ButtonDark buttonText="View" />
+          <ButtonDarkOutlineOnly buttonText="Share" iconOption={<FaShare />} />
+        </div>
       </div>
     </article>
   );
@@ -34,16 +32,28 @@ const styles = {
     flexDirection: "column",
     borderRadius: ".25rem",
     backgroundColor: "#1F2937",
-    color: "white",
     margin: "1rem",
-    padding: "1rem",
+    padding: "2rem",
     boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
   },
   adImage: {
     borderRadius: ".25rem .25rem 0 0",
   },
+  h1: {
+    color: "#1F2937",
+    margin: "0",
+  },
+  paragraphText: {
+    color: "#666",
+    margin: "1rem 0 1.5rem 0",
+  },
   buttonContainer: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  copyContainer: {
+    padding: "1rem",
+    backgroundColor: "white",
+    borderRadius: "0 0 .25rem .25rem",
   },
 };

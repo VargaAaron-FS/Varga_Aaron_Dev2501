@@ -14,33 +14,34 @@ import MyForm from "./components/MyForm";
 
 // Images
 import PhoneAdImage from "./img/phones-ad.jpg";
+import ComputerAdImage from "./img/computer-ad.jpg";
 
 class App extends Component {
   render() {
     return (
-        <div>
-          <MyHeader />
-          <main>
-            <div style={styles.whiteBox}>
-              <ButtonDark buttonText="Button Dark" />
-            </div>
-            <div style={styles.darkBox}>
-              <ButtonLight buttonText="Button Light" />
-            </div>
-            <div style={styles.darkBox}>
-              <ButtonLightOutlineOnly buttonText="Button Light Outline" />
-            </div>
-            <div style={styles.whiteBox}>
-              <ButtonDarkOutlineOnly buttonText="Button Light Outline" />
-            </div>
-            <div>
-              <MyForm />
-            </div>
-              <MyAds adImageUrl={PhoneAdImage} adImageAlt="Phone Ad"  />
-              <MyAds  />
-          </main>
-          <footer></footer>
-        </div>
+      <div>
+        <MyHeader />
+        <main>
+          <div style={styles.whiteBox}>
+            <ButtonDark buttonText="Button Dark" />
+          </div>
+          <div style={styles.darkBox}>
+            <ButtonLight buttonText="Button Light" />
+          </div>
+          <div style={styles.darkBox}>
+            <ButtonLightOutlineOnly buttonText="Button Light Outline" />
+          </div>
+          <div style={styles.whiteBox}>
+            <ButtonDarkOutlineOnly buttonText="Button Light Outline" />
+          </div>
+          <div>
+            <MyForm />
+          </div>
+          <MyAds adImageUrl={PhoneAdImage} adImageAlt="Phone Ad" />
+          <MyAds adImageUrl={ComputerAdImage} adImageAlt="Computer Ad" />
+        </main>
+        <footer></footer>
+      </div>
     );
   }
 }
