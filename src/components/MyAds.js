@@ -7,6 +7,9 @@ import ButtonLightOutlineOnly from "./buttons/ButtonLightOutlineOnly";
 // Import image
 import PhoneAd from "../img/phones-ad.jpg";
 
+// Import icons
+import { FaShare } from "react-icons/fa";
+
 const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
@@ -14,8 +17,12 @@ const MyAds = (props) => {
       <h1>My Ad 1</h1>
       <p>Some text goes here!</p>
       <div style={styles.buttonContainer}>
-        <ButtonLight buttonText="Learn more" />
-        <ButtonLightOutlineOnly buttonText="Share" />
+        <ButtonLight buttonText="Learn More" />
+        {/* How do I set it up so I can have the option of having an icon in a button or not?
+        I figured out how to do it, but I need to figure out how to adjust the margin for when
+        the icon is and is not in with the text.
+        */}
+        <ButtonLightOutlineOnly buttonText="Share" iconOption={<FaShare />} />
       </div>
     </article>
   );
@@ -31,9 +38,14 @@ const styles = {
     borderRadius: ".25rem",
     backgroundColor: "#1F2937",
     color: "white",
+    margin: "1rem",
+    padding: "1rem",
   },
   adImage: {
-    width: "100%",
     borderRadius: ".25rem .25rem 0 0",
+  },
+  buttonContainer: {
+      display: "flex",
+      justifyContent: "space-between",
   },
 };
