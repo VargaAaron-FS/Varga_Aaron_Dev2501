@@ -49,7 +49,7 @@ const MyHeader = (props) => {
         {/* Need a right side icon nav/menu */}
         <div style={styles.rightSide}>
           <button type="button" style={styles.rightIcons}>
-          <span style={styles.alertCircle}></span>
+            <span style={styles.alertCircle}></span>
             <FaBell />
           </button>
           {/* Add avatar */}

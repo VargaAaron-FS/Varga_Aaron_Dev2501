@@ -4,16 +4,13 @@ import React from "react";
 import ButtonLight from "./buttons/ButtonLight";
 import ButtonLightOutlineOnly from "./buttons/ButtonLightOutlineOnly";
 
-// Import image
-import PhoneAd from "../img/phones-ad.jpg";
-
 // Import icons
 import { FaShare } from "react-icons/fa";
 
 const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
-      <img src={PhoneAd} alt="Ad for Phones" style={styles.adImage} />
+      <img src={props.adImageUrl} alt={props.adImageAlt} style={styles.adImage} />
       <h1>My Ad 1</h1>
       <p>Some text goes here!</p>
       <div style={styles.buttonContainer}>
@@ -40,12 +37,13 @@ const styles = {
     color: "white",
     margin: "1rem",
     padding: "1rem",
+    boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
   },
   adImage: {
     borderRadius: ".25rem .25rem 0 0",
   },
   buttonContainer: {
-      display: "flex",
-      justifyContent: "space-between",
+    display: "flex",
+    justifyContent: "space-between",
   },
 };

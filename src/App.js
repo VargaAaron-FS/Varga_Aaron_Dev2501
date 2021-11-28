@@ -12,6 +12,9 @@ import ButtonLightOutlineOnly from "./components/buttons/ButtonLightOutlineOnly"
 // Forms
 import MyForm from "./components/MyForm";
 
+// Images
+import PhoneAdImage from "./img/phones-ad.jpg";
+
 class App extends Component {
   render() {
     return (
@@ -33,7 +36,8 @@ class App extends Component {
             <div>
               <MyForm />
             </div>
-              <MyAds />
+              <MyAds adImageUrl={PhoneAdImage} adImageAlt="Phone Ad"  />
+              <MyAds  />
           </main>
           <footer></footer>
         </div>
