@@ -22,10 +22,10 @@ const handleSearchBtnClick = () => {
 
 const MyHeader = (props) => {
   const handleMouseEnter = (e) => {
-    e.target.style.backgroundColor = "#eee";
+    e.target.style.backgroundColor = "#ddd";
   };
   const handleMouseLeave = (e) => {
-    e.target.style.backgroundColor = "white";
+    e.target.style.backgroundColor = "#eee";
   };
   return (
     <header style={styles.header}>
@@ -97,7 +97,7 @@ const styles = {
   },
   inputIcon: {
     color: "#1F2937",
-    backgroundColor: "#fff",
+    backgroundColor: "#eee",
     borderRadius: ".25rem 0 0 .25rem",
     padding: ".5rem .75rem",
     display: "flex",

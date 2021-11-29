@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import buttons
-import ButtonDark from "./buttons/ButtonDark";
+import ButtonLightTextOnly from "./buttons/ButtonLightTextOnly";
 
 // Import icons
 import { FaShare, FaExternalLinkAlt } from "react-icons/fa";
@@ -18,13 +18,13 @@ const MyAds = (props) => {
         <h1 style={styles.h1}>{props.adHeadingText}</h1>
         <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
-          <ButtonDark
+          <ButtonLightTextOnly
             buttonText="View"
             buttonType="button"
             iconSpace="&nbsp;&nbsp;"
             iconOption={<FaExternalLinkAlt />}
           />
-          <ButtonDark
+          <ButtonLightTextOnly
             buttonText="Share"
             buttonType="button"
             iconSpace="&nbsp;&nbsp;"

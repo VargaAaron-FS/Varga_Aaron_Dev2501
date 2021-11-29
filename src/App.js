@@ -70,9 +70,12 @@ const styles = {
   asideAds: {
     width: "20%",
     padding: "0 2rem",
+    paddingBottom: "2rem",
   },
   asideNav: {
     width: "20%",
     padding: "0 2rem",
+    paddingBottom: "2rem",
+    display: "flex",
   },
 };

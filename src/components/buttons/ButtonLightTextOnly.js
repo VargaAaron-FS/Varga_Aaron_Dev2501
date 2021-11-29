@@ -8,8 +8,20 @@ const ButtonLightTextOnly = (props) => {
   const handleMouseLeave = (e) => {
     e.target.style.textDecoration = "underline";
   };
+
   return (
-  <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} type={props.buttonType} style={styles.appBtn}>{props.buttonText}</button>
+    <button
+      type={props.buttonType}
+      style={styles.appBtn}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {props.buttonText}
+      {/* iconSpace prop so you can insert &nbsp; for space between the icon and button text */}
+      {props.iconSpace}
+      {/* iconOption in case you want to include an icon AFTER text */}
+      {props.iconOption}
+    </button>
   );
 };
 
@@ -25,6 +37,8 @@ const styles = {
     border: "none",
     backgroundColor: "transparent",
     textAlign: "left",
+    display: "flex",
+    alignItems: "center",
     textDecoration: "underline",
   },
 };

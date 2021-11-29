@@ -20,7 +20,7 @@ const ButtonDark = (props) => {
     >
       {props.buttonText}
       {/* iconSpace prop so you can insert &nbsp; for space between the icon and button text */}
-      {props.iconSpace}
+      {props.iconSpaces}
       {/* iconOption in case you want to include an icon AFTER text */}
       {props.iconOption}
     </button>

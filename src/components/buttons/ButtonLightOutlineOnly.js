@@ -2,7 +2,7 @@ import React from "react";
 
 // Dummy Component
 const ButtonLightOutlineOnly = (props) => {
-  return <button style={styles.appBtn}>{props.buttonText}{/* <span className="iconOption" style={styles.iconOptionStyle}>{props.iconOption}</span>*/}</button>;
+  return <button style={styles.appBtn}>{props.buttonText}</button>;
 };
 
 export default ButtonLightOutlineOnly;
@@ -20,8 +20,4 @@ const styles = {
     fontFamily: "Poppins",
     border: "2px solid white",
   },
-  // iconOptionStyle: {
-  //   display: "flex",
-  //   marginLeft: ".5rem",
-  // },
 };
