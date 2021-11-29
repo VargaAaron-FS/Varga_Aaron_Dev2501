@@ -12,7 +12,7 @@ import ImageUrl from "../img/icons8-user-male.svg";
 import MyAvatar from "./MyAvatar";
 
 // Search button click event
-const handleSearchClick = () => {
+const handleSearchBtnClick = () => {
   if (document.querySelector(".searchInputField").value === "") {
     document.querySelector(".searchInputField").focus();
   } else {
@@ -35,7 +35,7 @@ const MyHeader = (props) => {
             type="button"
             className="searchBtn"
             style={styles.inputIcon}
-            onClick={handleSearchClick}
+            onClick={handleSearchBtnClick}
           >
             <FaSearch />
           </button>

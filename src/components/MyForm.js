@@ -51,5 +51,5 @@ const styles = {
   buttonContainer: {
     display: "inline-block",
     margin: ".5rem",
-  }
+  },
 };

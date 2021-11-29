@@ -1,8 +1,23 @@
 import React from "react";
 
+// Hover states
+const buttonHover = () => {
+  let button = document.querySelector(".buttonDark");
+
+  button.addEventListener("mouseenter", function (event) {
+    event.target.style.backgroundColor = "transparent";
+    event.target.style.color = "#1F2937";
+  });
+
+  button.addEventListener("mouseleave", function (event) {
+    event.target.style.backgroundColor = "#1F2937";
+    event.target.style.color = "white";
+  });
+};
+
 // Dummy Component
 const ButtonDark = (props) => {
-  return <button style={styles.appBtn}>{props.buttonText}</button>;
+  return <button className="buttonDark" onMouseOver={buttonHover} style={styles.appBtn}>{props.buttonText}</button>;
 };
 
 export default ButtonDark;

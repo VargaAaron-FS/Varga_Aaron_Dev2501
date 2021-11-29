@@ -17,5 +17,6 @@ const styles = {
     border: "none",
     backgroundColor: "transparent",
     textAlign: "left",
+    textDecoration: "underline",
   },
 };
