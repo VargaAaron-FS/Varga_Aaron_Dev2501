@@ -74,7 +74,6 @@ const styles = {
   header: {
     backgroundColor: "#1F2937",
     padding: "1rem 0",
-    boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
   },
   container: {
     padding: "0 1rem",
@@ -112,7 +111,6 @@ const styles = {
     borderRadius: "0 .25rem .25rem 0",
     border: "none",
     fontFamily: "Poppins",
-    boxShadow: "inset 0px 0px 5px rgba(0,0,0,0.25)",
     minWidth: "30%",
   },
   rightSide: {

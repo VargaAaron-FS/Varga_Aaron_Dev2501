@@ -66,18 +66,13 @@ const styles = {
     background: "#eee",
     width: "60%",
     padding: "2rem",
-    zIndex: "0",
   },
   asideAds: {
     width: "20%",
-    padding: "2rem",
-    boxShadow: "0px 0px 25px rgba(0,0,0,0.05)",
-    zIndex: "10",
+    padding: "0 2rem",
   },
   asideNav: {
     width: "20%",
-    padding: "2rem",
-    boxShadow: "0px 0px 25px rgba(0,0,0,0.05)",
-    zIndex: "10",
+    padding: "0 2rem",
   },
 };

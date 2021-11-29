@@ -43,18 +43,18 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     borderRadius: ".25rem",
-    backgroundColor: "#1F2937",
-    boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
+    border: "2px solid #eee",
+    marginTop: "2rem",
   },
   adImage: {
     borderRadius: ".25rem .25rem 0 0",
   },
   h1: {
-    color: "#1F2937",
+    color: "white",
     margin: "0",
   },
   paragraphText: {
-    color: "#666",
+    color: "#eee",
     margin: "1rem 0 1.5rem 0",
   },
   buttonContainer: {
@@ -63,7 +63,7 @@ const styles = {
   },
   copyContainer: {
     padding: "1rem",
-    backgroundColor: "white",
+    backgroundColor: "#1F2937",
     borderRadius: "0 0 .25rem .25rem",
   },
 };

@@ -34,6 +34,9 @@ const styles = {
   myForm: {
     display: "flex",
     flexDirection: "column",
+    backgroundColor: "white",
+    padding: "2rem",
+    borderRadius: ".25rem",
   },
   inputContainer: {
     display: "flex",
@@ -44,7 +47,6 @@ const styles = {
     padding: ".5rem 1rem",
     borderRadius: ".25rem",
     fontFamily: "Poppins",
-    boxShadow: "inset 0px 0px 5px rgba(0,0,0,0.05)",
     border: "2px solid #eee",
     margin: ".5rem",
   },

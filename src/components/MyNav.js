@@ -19,5 +19,7 @@ const styles = {
   nav: {
     display: "flex",
     flexDirection: "column",
+    marginTop: "2rem",
+    rowGap: "1rem",
   },
 };
