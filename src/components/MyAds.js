@@ -10,10 +10,14 @@ import { FaShare } from "react-icons/fa";
 const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
-      <img src={props.adImageUrl} alt={props.adImageAlt} style={styles.adImage} />
+      <img
+        src={props.adImageUrl}
+        alt={props.adImageAlt}
+        style={styles.adImage}
+      />
       <div style={styles.copyContainer}>
-        <h1 style={styles.h1}>My Ad 1</h1>
-        <p style={styles.paragraphText}>Time for a new phone? Check these out! You might find one you absolutely love!</p>
+        <h1 style={styles.h1}>{props.adHeadingText}</h1>
+        <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
           <ButtonDark buttonText="View" />
           <ButtonDarkOutlineOnly buttonText="Share" iconOption={<FaShare />} />

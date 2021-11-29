@@ -2,12 +2,7 @@ import React, { Component } from "react";
 
 import MyHeader from "./components/MyHeader";
 import MyAds from "./components/MyAds";
-
-// Buttons
-import ButtonDark from "./components/buttons/ButtonDark";
-import ButtonLight from "./components/buttons/ButtonLight";
-import ButtonDarkOutlineOnly from "./components/buttons/ButtonDarkOutlineOnly";
-import ButtonLightOutlineOnly from "./components/buttons/ButtonLightOutlineOnly";
+import MyNav from "./components/MyNav";
 
 // Forms
 import MyForm from "./components/MyForm";
@@ -16,31 +11,36 @@ import MyForm from "./components/MyForm";
 import PhoneAdImage from "./img/phones-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
 
+// TODO: Create hover states in JS, not with styled components. I don't think styled components is necessary.
+
 class App extends Component {
   render() {
     return (
       <div>
         <MyHeader />
-        <main>
-          <div style={styles.whiteBox}>
-            <ButtonDark buttonText="Button Dark" />
-          </div>
-          <div style={styles.darkBox}>
-            <ButtonLight buttonText="Button Light" />
-          </div>
-          <div style={styles.darkBox}>
-            <ButtonLightOutlineOnly buttonText="Button Light Outline" />
-          </div>
-          <div style={styles.whiteBox}>
-            <ButtonDarkOutlineOnly buttonText="Button Light Outline" />
-          </div>
-          <div>
+        <main style={styles.main}>
+          <aside>
+            <MyNav />
+          </aside>
+          <div style={styles.mainContentArea}>
             <MyForm />
           </div>
-          <MyAds adImageUrl={PhoneAdImage} adImageAlt="Phone Ad" />
-          <MyAds adImageUrl={ComputerAdImage} adImageAlt="Computer Ad" />
+          <aside>
+            <MyAds
+              adImageUrl={PhoneAdImage}
+              adImageAlt="Phone Ad"
+              adHeadingText="My Ad Title"
+              adParaText="This is some text for my ad!"
+            />
+            <MyAds
+              adImageUrl={ComputerAdImage}
+              adImageAlt="Computer Ad"
+              adHeadingText="My Ad Title 2"
+              adParaText="This is also some text for my ad!"
+            />
+          </aside>
         </main>
-        <footer></footer>
+        <footer>{/* Footer component will go here */}</footer>
       </div>
     );
   }
@@ -58,4 +58,10 @@ const styles = {
     padding: "2rem",
     display: "inline-block",
   },
-}
+  main: {
+    display: "flex",
+  },
+  mainContentArea: {
+    background: "#eee",
+  },
+};
