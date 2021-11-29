@@ -18,8 +18,18 @@ const MyAds = (props) => {
         <h1 style={styles.h1}>{props.adHeadingText}</h1>
         <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
-          <ButtonDark buttonText="View" buttonType="button" iconSpace="&nbsp;&nbsp;" iconOption={<FaExternalLinkAlt />} />
-          <ButtonDark buttonText="Share" buttonType="button" iconSpace="&nbsp;&nbsp;" iconOption={<FaShare />} />
+          <ButtonDark
+            buttonText="View"
+            buttonType="button"
+            iconSpace="&nbsp;&nbsp;"
+            iconOption={<FaExternalLinkAlt />}
+          />
+          <ButtonDark
+            buttonText="Share"
+            buttonType="button"
+            iconSpace="&nbsp;&nbsp;"
+            iconOption={<FaShare />}
+          />
         </div>
       </div>
     </article>
@@ -30,13 +40,10 @@ export default MyAds;
 
 const styles = {
   myArticle: {
-    maxWidth: "320px",
     display: "flex",
     flexDirection: "column",
     borderRadius: ".25rem",
     backgroundColor: "#1F2937",
-    margin: "1rem",
-    padding: "2rem",
     boxShadow: "0px 0px 10px rgba(0,0,0,0.25)",
   },
   adImage: {

@@ -19,13 +19,13 @@ class App extends Component {
       <div>
         <MyHeader />
         <main style={styles.main}>
-          <aside>
+          <aside style={styles.asideNav}>
             <MyNav />
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm />
           </div>
-          <aside>
+          <aside style={styles.asideAds}>
             <MyAds
               adImageUrl={PhoneAdImage}
               adImageAlt="Phone Ad"
@@ -60,8 +60,24 @@ const styles = {
   },
   main: {
     display: "flex",
+    flexDirection: "row",
   },
   mainContentArea: {
     background: "#eee",
+    width: "60%",
+    padding: "2rem",
+    zIndex: "0",
+  },
+  asideAds: {
+    width: "20%",
+    padding: "2rem",
+    boxShadow: "0px 0px 25px rgba(0,0,0,0.05)",
+    zIndex: "10",
+  },
+  asideNav: {
+    width: "20%",
+    padding: "2rem",
+    boxShadow: "0px 0px 25px rgba(0,0,0,0.05)",
+    zIndex: "10",
   },
 };
