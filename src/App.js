@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import MyHeader from "./components/MyHeader";
 import MyAds from "./components/MyAds";
 import MyNav from "./components/MyNav";
+import MyFooter from "./components/MyFooter";
 
 // Forms
 import MyForm from "./components/MyForm";
@@ -40,7 +41,7 @@ class App extends Component {
             />
           </aside>
         </main>
-        <footer>{/* Footer component will go here */}</footer>
+        <MyFooter />
       </div>
     );
   }
