@@ -2,7 +2,22 @@ import React from "react";
 
 // Dummy Component
 const ButtonDarkTextOnly = (props) => {
-  return <button style={styles.appBtn}>{props.buttonText}</button>;
+  const handleMouseEnter = (e) => {
+    e.target.style.textDecoration = "none";
+  };
+  const handleMouseLeave = (e) => {
+    e.target.style.textDecoration = "underline";
+  };
+  return (
+    <button
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      type={props.buttonType}
+      style={styles.appBtn}
+    >
+      {props.buttonText}
+    </button>
+  );
 };
 
 export default ButtonDarkTextOnly;

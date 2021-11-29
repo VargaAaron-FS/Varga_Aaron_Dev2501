@@ -4,7 +4,7 @@ import React from "react";
 import ButtonDark from "./buttons/ButtonDark";
 
 // Import icons
-import { FaShare } from "react-icons/fa";
+import { FaShare, FaExternalLinkAlt } from "react-icons/fa";
 
 const MyAds = (props) => {
   return (
@@ -18,8 +18,8 @@ const MyAds = (props) => {
         <h1 style={styles.h1}>{props.adHeadingText}</h1>
         <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
-          <ButtonDark buttonText="View" buttonType="button" className="buttonDark" />
-          <ButtonDark buttonText="Share" iconSpace="&nbsp;&nbsp;" iconOption={<FaShare />} />
+          <ButtonDark buttonText="View" buttonType="button" iconSpace="&nbsp;&nbsp;" iconOption={<FaExternalLinkAlt />} />
+          <ButtonDark buttonText="Share" buttonType="button" iconSpace="&nbsp;&nbsp;" iconOption={<FaShare />} />
         </div>
       </div>
     </article>

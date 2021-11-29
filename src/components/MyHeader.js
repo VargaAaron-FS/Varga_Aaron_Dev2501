@@ -21,6 +21,12 @@ const handleSearchBtnClick = () => {
 };
 
 const MyHeader = (props) => {
+  const handleMouseEnter = (e) => {
+    e.target.style.backgroundColor = "#eee";
+  };
+  const handleMouseLeave = (e) => {
+    e.target.style.backgroundColor = "white";
+  };
   return (
     <header style={styles.header}>
       <div style={styles.container}>
@@ -36,6 +42,8 @@ const MyHeader = (props) => {
             className="searchBtn"
             style={styles.inputIcon}
             onClick={handleSearchBtnClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <FaSearch />
           </button>

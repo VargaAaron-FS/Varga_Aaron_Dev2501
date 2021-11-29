@@ -7,7 +7,7 @@ const ButtonDark = (props) => {
     e.target.style.color = "#1F2937";
   };
   const handleMouseLeave = (e) => {
-    e.target.style.background = "#1F2937";
+    e.target.style.backgroundColor = "#1F2937";
     e.target.style.color = "white";
   };
 
