@@ -6,9 +6,9 @@ import ButtonDarkTextOnly from "../components/buttons/ButtonDarkTextOnly";
 const MyNav = (props) => {
   return (
     <nav style={styles.nav}>
-      <ButtonDarkTextOnly buttonText="Newsfeed" />
-      <ButtonDarkTextOnly buttonText="Messages" />
-      <ButtonDarkTextOnly buttonText="Watch" />
+      <ButtonDarkTextOnly buttonText="Newsfeed" buttonType="button" />
+      <ButtonDarkTextOnly buttonText="Messages" buttonType="button" />
+      <ButtonDarkTextOnly buttonText="Watch" buttonType="button" />
     </nav>
   );
 };

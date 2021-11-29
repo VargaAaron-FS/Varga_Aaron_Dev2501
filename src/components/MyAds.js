@@ -2,7 +2,6 @@ import React from "react";
 
 // Import buttons
 import ButtonDark from "./buttons/ButtonDark";
-import ButtonDarkOutlineOnly from "./buttons/ButtonDarkOutlineOnly";
 
 // Import icons
 import { FaShare } from "react-icons/fa";
@@ -19,8 +18,8 @@ const MyAds = (props) => {
         <h1 style={styles.h1}>{props.adHeadingText}</h1>
         <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
-          <ButtonDark buttonText="View" />
-          <ButtonDarkOutlineOnly buttonText="Share" iconOption={<FaShare />} />
+          <ButtonDark buttonText="View" buttonType="button" className="buttonDark" />
+          <ButtonDark buttonText="Share" iconSpace="&nbsp;&nbsp;" iconOption={<FaShare />} />
         </div>
       </div>
     </article>

@@ -22,7 +22,7 @@ const MyForm = (props) => {
         <input type="tel" style={styles.input} placeholder="Phone" />
       </div>
       <div style={styles.buttonContainer}>
-        <ButtonDark buttonText="Submit" />
+        <ButtonDark buttonText="Submit" buttonType="submit" />
       </div>
     </form>
   );

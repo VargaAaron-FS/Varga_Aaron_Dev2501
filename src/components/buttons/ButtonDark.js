@@ -1,23 +1,30 @@
 import React from "react";
 
-// Hover states
-const buttonHover = () => {
-  let button = document.querySelector(".buttonDark");
-
-  button.addEventListener("mouseenter", function (event) {
-    event.target.style.backgroundColor = "transparent";
-    event.target.style.color = "#1F2937";
-  });
-
-  button.addEventListener("mouseleave", function (event) {
-    event.target.style.backgroundColor = "#1F2937";
-    event.target.style.color = "white";
-  });
-};
-
 // Dummy Component
 const ButtonDark = (props) => {
-  return <button className="buttonDark" onMouseOver={buttonHover} style={styles.appBtn}>{props.buttonText}</button>;
+  const handleMouseEnter = (e) => {
+    e.target.style.backgroundColor = "transparent";
+    e.target.style.color = "#1F2937";
+  };
+  const handleMouseLeave = (e) => {
+    e.target.style.background = "#1F2937";
+    e.target.style.color = "white";
+  };
+
+  return (
+    <button
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={styles.appBtn}
+      type={props.buttonType}
+    >
+      {props.buttonText}
+      {/* iconSpace prop so you can insert &nbsp; for space between the icon and button text */}
+      {props.iconSpace}
+      {/* iconOption in case you want to include an icon AFTER text */}
+      {props.iconOption}
+    </button>
+  );
 };
 
 export default ButtonDark;
@@ -32,5 +39,7 @@ const styles = {
     color: "white",
     fontFamily: "Poppins",
     border: "2px solid #1F2937",
+    display: "flex",
+    alignItems: "center",
   },
 };
