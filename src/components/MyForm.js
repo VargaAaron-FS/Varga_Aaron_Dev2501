@@ -1,6 +1,6 @@
 import React from "react";
 
-import ButtonDark from "./buttons/ButtonDark";
+import ButtonLight from "./buttons/ButtonLight";
 
 // import avatar
 import MyAvatar from "../components/MyAvatar";
@@ -20,7 +20,7 @@ const MyForm = (props) => {
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
           <p style={styles.userQuestion}>What's on your mind, {props.userName}?</p>
         </div>
-        <ButtonDark buttonText="Submit" buttonType="submit" />
+        <ButtonLight buttonText="Submit" buttonType="submit" />
       </div>
     </form>
   );
@@ -32,7 +32,7 @@ const styles = {
   myForm: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "white",
+    backgroundColor: "#1F2937",
     padding: "2rem",
     borderRadius: ".25rem",
     rowGap: "1rem",
@@ -67,6 +67,6 @@ const styles = {
     columnGap: "1rem",
   },
   userQuestion: {
-    color: "#1F2937",
+    color: "white",
   },
 };

@@ -21,7 +21,8 @@ const styles = {
   myAvatar: {
     height: "calc(48px - 1rem)", // calc to offset padding
     borderRadius: "50%",
-    backgroundColor: "#eee",
+    backgroundColor: "white",
     padding: ".5rem",
+    border: "2px solid #eee",
   },
 };
