@@ -7,3 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white; /* Specifically for Codeanywhere platform - may delete otherwise */
 }
+
+/*
+
+My colors:
+
+Primary: #1F2937 (Main dark blue theme color)
+Red: #ff0f0f (Alerts, errors, delete, etc.)
+Light Gray: #EEE
+Medium Gray: #DDD
+White: #FFF
+
+*/
