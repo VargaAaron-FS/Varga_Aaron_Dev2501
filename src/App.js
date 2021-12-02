@@ -9,7 +9,7 @@ import MyFooter from "./components/MyFooter";
 import MyForm from "./components/MyForm";
 
 // Images
-import PhoneAdImage from "./img/phones-ad.jpg";
+import PhoneAdImage from "./img/phone-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
 
 // TODO: Create hover states in JS, not with styled components. I don't think styled components is necessary.
@@ -29,15 +29,15 @@ class App extends Component {
           <aside style={styles.asideAds}>
             <MyAds
               adImageUrl={PhoneAdImage}
-              adImageAlt="Phone Ad"
-              adHeadingText="My Ad Title"
-              adParaText="This is some text for my ad!"
+              adImageAlt="New iPhone 13 Pro Ad"
+              adHeadingText="New iPhone 13 Pro"
+              adParaText="The biggest Pro camera system upgrade ever. Super Retina XDR display with ProMotion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Superfast 5G. Durable design and the best battery life ever in an iPhone."
             />
             <MyAds
               adImageUrl={ComputerAdImage}
               adImageAlt="Computer Ad"
               adHeadingText="My Ad Title 2"
-              adParaText="This is also some text for my ad!"
+              adParaText="The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life."
             />
           </aside>
         </main>

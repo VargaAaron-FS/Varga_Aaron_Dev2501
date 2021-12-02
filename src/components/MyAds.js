@@ -60,7 +60,8 @@ const styles = {
   },
   buttonContainer: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
+    columnGap: "1rem",
   },
   copyContainer: {
     padding: "1rem",
