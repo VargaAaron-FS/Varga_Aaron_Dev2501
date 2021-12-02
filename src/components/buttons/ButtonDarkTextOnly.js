@@ -25,6 +25,7 @@ export default ButtonDarkTextOnly;
 const styles = {
   appBtn: {
     fontWeight: "700",
+    fontSize: "1rem",
     cursor: "pointer",
     color: "#1F2937",
     fontFamily: "Poppins",

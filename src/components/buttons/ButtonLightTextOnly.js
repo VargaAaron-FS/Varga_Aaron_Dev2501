@@ -30,6 +30,7 @@ export default ButtonLightTextOnly;
 const styles = {
   appBtn: {
     fontWeight: "700",
+    fontSize: "1rem",
     margin: ".5rem 0",
     cursor: "pointer",
     color: "white",

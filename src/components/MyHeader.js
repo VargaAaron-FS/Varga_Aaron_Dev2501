@@ -9,7 +9,7 @@ import { FaSearch, FaBell } from "react-icons/fa";
 
 // Avatar
 import ImageUrl from "../img/icons8-user-male.svg";
-import MyAvatar from "./MyAvatar";
+import MyAvatarDropdown from "./MyAvatarDropdown";
 
 // Search button click event
 const handleSearchBtnClick = () => {
@@ -61,7 +61,7 @@ const MyHeader = (props) => {
             <FaBell />
           </button>
           {/* Add avatar */}
-          <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
+          <MyAvatarDropdown AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
         </div>
       </div>
     </header>
@@ -74,6 +74,7 @@ const styles = {
   header: {
     backgroundColor: "#1F2937",
     padding: "1rem 0",
+    borderBottom: "4px solid #eee",
   },
   container: {
     padding: "0 1rem",
@@ -136,7 +137,6 @@ const styles = {
     position: "absolute",
     right: "-4px",
     top: "-2px",
-    boxShadow: "0px 0px 3px rgba(0,0,0,1)",
     border: "1px solid #1F2937",
   },
 };

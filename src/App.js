@@ -24,7 +24,7 @@ class App extends Component {
             <MyNav />
           </aside>
           <div style={styles.mainContentArea}>
-            <MyForm />
+            <MyForm userName="Aaron" />
           </div>
           <aside style={styles.asideAds}>
             <MyAds

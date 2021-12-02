@@ -61,12 +61,14 @@ const styles = {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    borderTop: "4px solid #eee",
   },
   paraText: {
     margin: "0",
     display: "flex",
     alignItems: "center",
     color: "#eee",
+    fontSize: "1rem",
   },
   linkText: {
     color: "white",
