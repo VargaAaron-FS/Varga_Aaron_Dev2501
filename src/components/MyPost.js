@@ -20,7 +20,9 @@ const MyPost = (props) => {
       <div style={styles.contentContainer}>
         <p>{props.postMessage}</p>
         {/* Image for post goes here */}
-        <img src={props.postImgUrl} alt={props.postImgAlt} />
+        <div style={styles.imgContainer}>
+          <img style={styles.postImgStyle} src={props.postImgUrl} alt={props.postImgAlt} />
+        </div>
       </div>
     </aside>
   );
@@ -35,6 +37,7 @@ const styles = {
     backgroundColor: "white",
     padding: "2rem",
     borderRadius: ".25rem",
+    rowGap: "1rem",
   },
   buttonsContainer: {
     display: "flex",
@@ -50,9 +53,25 @@ const styles = {
   },
   h2: {
     margin: "0",
+    cursor: "pointer",
   },
   deleteBtn: {
     color: "#ff0f0f",
     cursor: "pointer",
+  },
+  contentContainer: {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: "1rem",
+  },
+  imgContainer: {
+    // May or may not need...
+  },
+  postImgStyle: {
+    width: "100%",
+    maxHeight: "400px",
+    objectFit: "cover",
+    cursor: "pointer",
+    borderRadius: ".25rem",
   },
 };

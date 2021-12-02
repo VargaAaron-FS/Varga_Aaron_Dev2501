@@ -13,6 +13,9 @@ import MyForm from "./components/MyForm";
 import PhoneAdImage from "./img/phone-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
 
+// Post image url
+import PostImgUrl from "./img/mountain-post-img.jpg";
+
 // TODO: Create hover states in JS, not with styled components. I don't think styled components is necessary.
 
 class App extends Component {
@@ -26,7 +29,7 @@ class App extends Component {
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm userName="Aaron" />
-            <MyPost userName="Aaron" postMessage="This is where the post's message would render." />
+            <MyPost userName="Aaron" postMessage="This is where the post's message would render." postImgAlt="Mountain" postImgUrl={PostImgUrl} />
           </div>
           <aside style={styles.asideAds}>
             <MyAds
