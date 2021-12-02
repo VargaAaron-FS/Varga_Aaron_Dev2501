@@ -18,7 +18,7 @@ const MyForm = (props) => {
       <div style={styles.buttonContainer}>
         <div style={styles.avatarContainer}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
-          <p>What's on your mind, {props.userName}?</p>
+          <p style={styles.userQuestion}>What's on your mind, {props.userName}?</p>
         </div>
         <ButtonDark buttonText="Submit" buttonType="submit" />
       </div>
@@ -65,5 +65,8 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     columnGap: "1rem",
+  },
+  userQuestion: {
+    color: "#1F2937",
   },
 };

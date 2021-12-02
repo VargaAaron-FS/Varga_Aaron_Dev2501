@@ -37,13 +37,13 @@ const MyFooter = (props) => {
         </span>
       </p>
       <div style={styles.networkIconsContainer}>
-        <a href="../../">
+        <a href="https://dribbble.com/iamaaronvarga" target="_blank" rel="noreferrer">
           <MyIconsLight iconClass={<FaDribbbleSquare />} />
         </a>
-        <a href="../../">
+        <a href="https://github.com/VargaAaron-FS" target="_blank" rel="noreferrer">
           <MyIconsLight iconClass={<FaGithubSquare />} />
         </a>
-        <a href="../../">
+        <a href="https://www.linkedin.com/in/iamaaronvarga/" target="_blank" rel="noreferrer">
           <MyIconsLight iconClass={<FaLinkedin />} />
         </a>
       </div>

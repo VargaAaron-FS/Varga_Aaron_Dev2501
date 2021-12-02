@@ -15,7 +15,7 @@ const MyAds = (props) => {
         style={styles.adImage}
       />
       <div style={styles.copyContainer}>
-        <h1 style={styles.h1}>{props.adHeadingText}</h1>
+        <h2 style={styles.h2}>{props.adHeadingText}</h2>
         <p style={styles.paragraphText}>{props.adParaText}</p>
         <div style={styles.buttonContainer}>
           <ButtonLightTextOnly
@@ -43,13 +43,12 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     borderRadius: ".25rem",
-    border: "2px solid #eee",
     marginTop: "2rem",
   },
   adImage: {
     borderRadius: ".25rem .25rem 0 0",
   },
-  h1: {
+  h2: {
     color: "white",
     margin: "0",
     fontSize: "2rem",

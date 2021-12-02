@@ -4,6 +4,7 @@ import MyHeader from "./components/MyHeader";
 import MyAds from "./components/MyAds";
 import MyNav from "./components/MyNav";
 import MyFooter from "./components/MyFooter";
+import MyPost from "./components/MyPost";
 
 // Forms
 import MyForm from "./components/MyForm";
@@ -25,18 +26,19 @@ class App extends Component {
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm userName="Aaron" />
+            <MyPost userName="Aaron" postMessage="This is where the post's message would render." />
           </div>
           <aside style={styles.asideAds}>
             <MyAds
               adImageUrl={PhoneAdImage}
-              adImageAlt="New iPhone 13 Pro Ad"
-              adHeadingText="New iPhone 13 Pro"
+              adImageAlt="New iPhone 13 Ad"
+              adHeadingText="Shop the new iPhone 13"
               adParaText="The biggest Pro camera system upgrade ever. Super Retina XDR display with ProMotion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Superfast 5G. Durable design and the best battery life ever in an iPhone."
             />
             <MyAds
               adImageUrl={ComputerAdImage}
-              adImageAlt="Computer Ad"
-              adHeadingText="My Ad Title 2"
+              adImageAlt="New MacBook Pro Ad"
+              adHeadingText="Shop the new MacBook Pro"
               adParaText="The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life."
             />
           </aside>
@@ -64,9 +66,12 @@ const styles = {
     flexDirection: "row",
   },
   mainContentArea: {
+    display: "flex",
+    flexDirection: "column",
     background: "#eee",
     width: "60%",
     padding: "2rem",
+    rowGap: "2rem",
   },
   asideAds: {
     width: "20%",
