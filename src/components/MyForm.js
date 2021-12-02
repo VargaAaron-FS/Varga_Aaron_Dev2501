@@ -12,7 +12,7 @@ const MyForm = (props) => {
       <div style={styles.inputContainer}>
         <textarea
           style={styles.textArea}
-          placeholder="Write post here"
+          placeholder="Write your post here"
         ></textarea>
       </div>
       <div style={styles.buttonContainer}>
@@ -35,7 +35,7 @@ const styles = {
     backgroundColor: "#1F2937",
     padding: "2rem",
     borderRadius: ".25rem",
-    rowGap: "1rem",
+    rowGap: "2rem",
   },
   inputContainer: {
     display: "flex",

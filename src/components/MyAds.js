@@ -51,7 +51,6 @@ const styles = {
   h2: {
     color: "white",
     margin: "0",
-    fontSize: "2rem",
   },
   paragraphText: {
     color: "#eee",
@@ -63,7 +62,7 @@ const styles = {
     columnGap: "1rem",
   },
   copyContainer: {
-    padding: "1rem",
+    padding: "1rem 2rem",
     backgroundColor: "#1F2937",
     borderRadius: "0 0 .25rem .25rem",
   },

@@ -29,7 +29,7 @@ class App extends Component {
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm userName="Aaron" />
-            <MyPost userName="Aaron" postMessage="This is where the post's message would render." postImgAlt="Mountain" postImgUrl={PostImgUrl} />
+            <MyPost userName="Aaron Varga" postMessage="This is where the post's message would render." postImgAlt="Mountain" postImgUrl={PostImgUrl} />
           </div>
           <aside style={styles.asideAds}>
             <MyAds
