@@ -10,9 +10,10 @@ const MyForm = (props) => {
   return (
     <form style={styles.myForm} onSubmit={props.addName}>
       <div style={styles.inputContainer}>
+        <input style={styles.postTitle} type="text" placeholder="Enter your post title" />
         <textarea
           style={styles.textArea}
-          placeholder="Write your post here"
+          placeholder="Write your post"
         ></textarea>
       </div>
       <div style={styles.buttonContainer}>
@@ -39,14 +40,21 @@ const styles = {
   },
   inputContainer: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
+    rowGap: "1rem",
+  },
+  postTitle: {
+    padding: "1rem",
+    borderRadius: ".25rem",
+    border: "2px solid #eee",
+    fontFamily: "Poppins",
   },
   textArea: {
     fontFamily: "Poppins",
-    width: "100%",
     border: "2px solid #eee",
     padding: "1rem",
     borderRadius: ".25rem",
+    resize: "vertical",
   },
   input: {
     display: "flex",
