@@ -10,4 +10,6 @@ Web Development @ Full Sail University
 
 ### 01_Components - Components created for application
 
+![App Preview](https://www.iamaaronvarga.com/fs-bs-wd/interface-programming/01_Components-Varga_Aaron-min.png)
+
 ### 02_
