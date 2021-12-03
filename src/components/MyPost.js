@@ -4,7 +4,7 @@ import MyAvatar from "../components/MyAvatar";
 import ImageUrl from "../img/icons8-user-male.svg";
 
 // Icon(s)
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaEdit } from "react-icons/fa";
 
 const MyPost = (props) => {
   return (
@@ -14,14 +14,21 @@ const MyPost = (props) => {
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
           <h2 style={styles.h2}>{props.userName}</h2>
         </div>
-        {/* Close Icon */}
-        <FaTimes style={styles.deleteBtn} />
+        <div style={styles.iconsContainer}>
+          {/* Close Icon */}
+          <FaEdit style={styles.editBtn} />
+          <FaTimes style={styles.deleteBtn} />
+        </div>
       </div>
       <div style={styles.contentContainer}>
         <p>{props.postMessage}</p>
         {/* Image for post goes here */}
         <div style={styles.imgContainer}>
-          <img style={styles.postImgStyle} src={props.postImgUrl} alt={props.postImgAlt} />
+          <img
+            style={styles.postImgStyle}
+            src={props.postImgUrl}
+            alt={props.postImgAlt}
+          />
         </div>
       </div>
     </aside>
@@ -55,6 +62,15 @@ const styles = {
     margin: "0",
     cursor: "pointer",
     color: "#1F2937",
+  },
+  iconsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    columnGap: "1rem",
+  },
+  editBtn: {
+    color: "#1F2937",
+    cursor: "pointer",
   },
   deleteBtn: {
     color: "#ff0f0f",

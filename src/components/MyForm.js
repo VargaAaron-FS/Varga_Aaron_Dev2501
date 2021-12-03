@@ -13,7 +13,7 @@ const MyForm = (props) => {
         <input style={styles.postTitle} type="text" placeholder="Enter your post title" />
         <textarea
           style={styles.textArea}
-          placeholder="Write your post"
+          placeholder="Write your post message"
         ></textarea>
       </div>
       <div style={styles.buttonContainer}>
