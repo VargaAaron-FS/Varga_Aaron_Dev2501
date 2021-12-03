@@ -12,7 +12,7 @@ const MyPost = (props) => {
       <div style={styles.buttonsContainer}>
         <div style={styles.userStyle}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
-          <h2 style={styles.h2}>{props.userName}</h2>
+          <h2 style={styles.h2}>{props.postTitle}</h2>
         </div>
         <div style={styles.iconsContainer}>
           {/* Close Icon */}
