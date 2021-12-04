@@ -12,7 +12,7 @@ const MyPost = (props) => {
       <div style={styles.buttonsContainer}>
         <div style={styles.userStyle}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
-          <h2 style={styles.h2}>{props.postTitle}</h2>
+          <h2 style={styles.h2}>{props.val.pTitle}</h2>
         </div>
         <div style={styles.iconsContainer}>
           {/* Close Icon */}
@@ -21,13 +21,13 @@ const MyPost = (props) => {
         </div>
       </div>
       <div style={styles.contentContainer}>
-        <p>{props.postMessage}</p>
+        <p>{props.val.pMsg}</p>
         {/* Image for post goes here */}
         <div style={styles.imgContainer}>
           <img
             style={styles.postImgStyle}
-            src={props.postImgUrl}
-            alt={props.postImgAlt}
+            src={props.val.pImg}
+            alt={props.val.pImgAlt}
           />
         </div>
       </div>
@@ -90,5 +90,6 @@ const styles = {
     objectFit: "cover",
     cursor: "pointer",
     borderRadius: ".25rem",
+    border: "2px solid #eee",
   },
 };

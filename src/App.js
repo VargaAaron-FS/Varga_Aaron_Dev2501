@@ -13,12 +13,37 @@ import MyForm from "./components/MyForm";
 // Images
 import PhoneAdImage from "./img/phone-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
-
-// Post image url
-import PostImgUrl from "./img/mountain-post-img.jpg";
+import MountainImg from "./img/mountain-post-img.jpg";
 
 class App extends Component {
+  state = {
+    pCard: [
+      {
+        pTitle: "Post Title",
+        pMsg: "This is where the post message would go.",
+        pImg: MountainImg,
+        pImgAlt: "This is the image's alt tag",
+      },
+    ],
+  };
+
+  getInput = (e) => {
+    this.setState({ pTitle: e.target.value });
+  };
+
+  addItem = (e) => {
+    e.preventDefault();
+    this.setState({
+      pCard: [...this.state.pCard, { pTitle: this.state.pTitle }],
+    });
+    e.target.reset();
+  };
+
   render() {
+    let myList = this.state.pCard.map((element, i) => {
+      return <MyPost key={i} val={element} />;
+    });
+
     return (
       <div>
         <MyHeader />
@@ -28,12 +53,7 @@ class App extends Component {
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm userName="Aaron" />
-            <MyPost
-              postTitle="Rocky Mountain Trip"
-              postMessage="I hope to move out to the mountains somewhere someday! Salt Lake City, Utah was beautiful."
-              postImgAlt="Mountain"
-              postImgUrl={PostImgUrl}
-            />
+            {myList}
           </div>
           <aside style={styles.asideAds}>
             <MyAds
