@@ -44,9 +44,12 @@ const styles = {
     flexDirection: "column",
     borderRadius: ".25rem",
     marginTop: "2rem",
+    backgroundColor: "#1F2937",
   },
   adImage: {
-    borderRadius: ".25rem .25rem 0 0",
+    borderRadius: ".25rem",
+    margin: "2rem 2rem 0 2rem",
+    border: "2px solid #eee",
   },
   h2: {
     color: "white",
@@ -58,12 +61,11 @@ const styles = {
   },
   buttonContainer: {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
     columnGap: "1rem",
   },
   copyContainer: {
-    padding: "1rem 2rem",
-    backgroundColor: "#1F2937",
+    padding: "1rem 2rem 1.5rem 2rem",
     borderRadius: "0 0 .25rem .25rem",
   },
 };

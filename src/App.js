@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// Components
 import MyHeader from "./components/MyHeader";
 import MyAds from "./components/MyAds";
 import MyNav from "./components/MyNav";
@@ -16,8 +17,6 @@ import ComputerAdImage from "./img/computer-ad.jpg";
 // Post image url
 import PostImgUrl from "./img/mountain-post-img.jpg";
 
-// TODO: Create hover states in JS, not with styled components. I don't think styled components is necessary.
-
 class App extends Component {
   render() {
     return (
@@ -29,7 +28,12 @@ class App extends Component {
           </aside>
           <div style={styles.mainContentArea}>
             <MyForm userName="Aaron" />
-            <MyPost postTitle="Rocky Mountain Trip" postMessage="I hope to move out to the mountains somewhere someday! Salt Lake City, Utah was beautiful." postImgAlt="Mountain" postImgUrl={PostImgUrl} />
+            <MyPost
+              postTitle="Rocky Mountain Trip"
+              postMessage="I hope to move out to the mountains somewhere someday! Salt Lake City, Utah was beautiful."
+              postImgAlt="Mountain"
+              postImgUrl={PostImgUrl}
+            />
           </div>
           <aside style={styles.asideAds}>
             <MyAds
@@ -54,7 +58,6 @@ class App extends Component {
 
 export default App;
 
-// whiteBox and darkBox just to show buttons
 const styles = {
   whiteBox: {
     padding: "2rem",
