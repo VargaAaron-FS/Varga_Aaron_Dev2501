@@ -8,7 +8,7 @@ import { FaTimes, FaEdit } from "react-icons/fa";
 
 const MyPost = (props) => {
   return (
-    <aside style={styles.postContainer}>
+    <article style={styles.postContainer}>
       <div style={styles.buttonsContainer}>
         <div style={styles.userStyle}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
@@ -31,7 +31,7 @@ const MyPost = (props) => {
           />
         </div>
       </div>
-    </aside>
+    </article>
   );
 };
 

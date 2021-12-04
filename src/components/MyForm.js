@@ -8,10 +8,20 @@ import ImageUrl from "../img/icons8-user-male.svg";
 
 const MyForm = (props) => {
   return (
-    <form style={styles.myForm} onSubmit={props.addName}>
+    <form style={styles.myForm} onSubmit={props.addItem}>
       <div style={styles.inputContainer}>
-        <input style={styles.postTitle} type="text" placeholder="Enter your post title" />
+        <input
+          name="pTitle"
+          value={props.pTitle}
+          onChange={props.getTitle}
+          style={styles.postTitle}
+          type="text"
+          placeholder="Enter your post title"
+        />
         <textarea
+          name="pMsg"
+          value={props.pMsg}
+          onChange={props.getMsg}
           style={styles.textArea}
           placeholder="Write your post message"
         ></textarea>
@@ -19,9 +29,11 @@ const MyForm = (props) => {
       <div style={styles.buttonContainer}>
         <div style={styles.avatarContainer}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
-          <p style={styles.userQuestion}>What's on your mind, {props.userName}?</p>
+          <p style={styles.userQuestion}>
+            What's on your mind, {props.userName}?
+          </p>
         </div>
-        <ButtonLight buttonText="Submit" buttonType="submit" />
+        <ButtonLight {...props} />
       </div>
     </form>
   );

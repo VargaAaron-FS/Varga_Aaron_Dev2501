@@ -27,14 +27,18 @@ class App extends Component {
     ],
   };
 
-  getInput = (e) => {
+  getTitle = (e) => {
     this.setState({ pTitle: e.target.value });
+  };
+
+  getMsg = (e) => {
+    this.setState({ pMsg: e.target.value });
   };
 
   addItem = (e) => {
     e.preventDefault();
     this.setState({
-      pCard: [...this.state.pCard, { pTitle: this.state.pTitle }],
+      pCard: [...this.state.pCard, { pTitle: this.state.pTitle, pMsg: this.state.pMsg }],
     });
     e.target.reset();
   };
@@ -52,7 +56,14 @@ class App extends Component {
             <MyNav />
           </aside>
           <div style={styles.mainContentArea}>
-            <MyForm userName="Aaron" />
+            <MyForm
+              userName="Aaron"
+              getTitle={this.getTitle}
+              getMsg={this.getMsg}
+              addItem={this.addItem}
+              buttonText="Add Post"
+              buttonType="submit"
+            />
             {myList}
           </div>
           <aside style={styles.asideAds}>
