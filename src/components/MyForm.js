@@ -25,6 +25,8 @@ const MyForm = (props) => {
           style={styles.textArea}
           placeholder="Write your post message"
         ></textarea>
+        {/* Does not work, just added it to remind me to work on image upload later */}
+        <input type="file" style={styles.imgUpload} />
       </div>
       <div style={styles.buttonContainer}>
         <div style={styles.avatarContainer}>
@@ -75,6 +77,10 @@ const styles = {
     fontFamily: "Poppins",
     border: "2px solid #eee",
     margin: ".5rem",
+  },
+  imgUpload: {
+    fontFamily: "Poppins",
+    color: "white",
   },
   buttonContainer: {
     display: "flex",

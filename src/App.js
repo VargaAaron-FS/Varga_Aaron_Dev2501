@@ -11,9 +11,15 @@ import MyPost from "./components/MyPost";
 import MyForm from "./components/MyForm";
 
 // Images
+
+// - Ad images
 import PhoneAdImage from "./img/phone-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
+
+// - Post images
 import MountainImg from "./img/mountain-post-img.jpg";
+import CodeImg from "./img/code.jpg";
+import DogImg from "./img/doggy.jpg";
 
 class App extends Component {
   state = {
@@ -22,6 +28,18 @@ class App extends Component {
         pTitle: "Post Title",
         pMsg: "This is where the post message would go.",
         pImg: MountainImg,
+        pImgAlt: "This is the image's alt tag",
+      },
+      {
+        pTitle: "Post Title",
+        pMsg: "This is where the post message would go.",
+        pImg: CodeImg,
+        pImgAlt: "This is the image's alt tag",
+      },
+      {
+        pTitle: "Post Title",
+        pMsg: "This is where the post message would go.",
+        pImg: DogImg,
         pImgAlt: "This is the image's alt tag",
       },
     ],
@@ -38,7 +56,7 @@ class App extends Component {
   addItem = (e) => {
     e.preventDefault();
     this.setState({
-      pCard: [...this.state.pCard, { pTitle: this.state.pTitle, pMsg: this.state.pMsg }],
+      pCard: [...this.state.pCard, { pTitle: this.state.pTitle, pMsg: this.state.pMsg, pImg: MountainImg }],
     });
     e.target.reset();
   };
