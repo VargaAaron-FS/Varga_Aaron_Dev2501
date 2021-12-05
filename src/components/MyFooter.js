@@ -80,7 +80,7 @@ const styles = {
   iconStyle: {
     fontSize: "1.5rem",
     display: "flex",
-    color: "silver",
+    color: "#eee",
   },
   networkIconsContainer: {
     display: "flex",

@@ -4,8 +4,8 @@ import React from "react";
 const MyLogo = (props) => {
   return (
     <a href="../../" style={styles.logoLink}>
-      <div style={styles.myLogo}>
-        <img src={props.LogoIcon} alt={props.LogoIcon} />
+      <div style={styles.myLogoContainer}>
+        <img src={props.LogoIcon} alt={props.LogoIcon} style={styles.logoImg} />
         <span style={styles.logoText}>UI</span>
       </div>
     </a>
@@ -15,10 +15,13 @@ const MyLogo = (props) => {
 export default MyLogo;
 
 const styles = {
-  myLogo: {
+  myLogoContainer: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  logoImg: {
     height: "32px",
     cursor: "pointer",
-    display: "flex",
   },
   logoText: {
     color: "white",

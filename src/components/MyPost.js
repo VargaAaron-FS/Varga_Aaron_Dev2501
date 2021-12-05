@@ -60,7 +60,6 @@ const styles = {
   },
   h2: {
     margin: "0",
-    cursor: "pointer",
     color: "#1F2937",
   },
   iconsContainer: {

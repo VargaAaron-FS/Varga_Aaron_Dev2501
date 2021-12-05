@@ -84,7 +84,10 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
   },
-  leftSide: {},
+  leftSide: {
+    display: "flex",
+    alignItems: "center",
+  },
   logo: {
     margin: "0",
     padding: "0",

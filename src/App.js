@@ -6,8 +6,6 @@ import MyAds from "./components/MyAds";
 import MyNav from "./components/MyNav";
 import MyFooter from "./components/MyFooter";
 import MyPost from "./components/MyPost";
-
-// Forms
 import MyForm from "./components/MyForm";
 
 // Images
@@ -20,27 +18,28 @@ import ComputerAdImage from "./img/computer-ad.jpg";
 import MountainImg from "./img/mountain-post-img.jpg";
 import CodeImg from "./img/code.jpg";
 import DogImg from "./img/doggy.jpg";
+import NewPostImg from "./img/monkey.jpg";
 
 class App extends Component {
   state = {
     pCard: [
       {
-        pTitle: "Post Title",
-        pMsg: "This is where the post message would go.",
+        pTitle: "I Love the Mountains",
+        pMsg: "I loved visiting Salt Lake City, Utah!",
         pImg: MountainImg,
-        pImgAlt: "This is the image's alt tag",
+        pImgAlt: "Mountains",
       },
       {
-        pTitle: "Post Title",
-        pMsg: "This is where the post message would go.",
+        pTitle: "React is Fun",
+        pMsg: "I am having so much fun learning React so far!",
         pImg: CodeImg,
-        pImgAlt: "This is the image's alt tag",
+        pImgAlt: "Programming Code",
       },
       {
-        pTitle: "Post Title",
-        pMsg: "This is where the post message would go.",
+        pTitle: "Dogs Are My Life",
+        pMsg: "I want to rescue all of the dogs in the world.",
         pImg: DogImg,
-        pImgAlt: "This is the image's alt tag",
+        pImgAlt: "Dog",
       },
     ],
   };
@@ -56,7 +55,10 @@ class App extends Component {
   addItem = (e) => {
     e.preventDefault();
     this.setState({
-      pCard: [...this.state.pCard, { pTitle: this.state.pTitle, pMsg: this.state.pMsg, pImg: MountainImg }],
+      pCard: [
+        ...this.state.pCard,
+        { pTitle: this.state.pTitle, pMsg: this.state.pMsg, pImg: NewPostImg },
+      ],
     });
     e.target.reset();
   };
