@@ -16,8 +16,8 @@ const MyPost = (props) => {
         </div>
         <div style={styles.iconsContainer}>
           {/* Close Icon */}
-          <FaEdit style={styles.editBtn} />
-          <FaTimes style={styles.deleteBtn} />
+          <FaEdit style={styles.editBtn} onClick={props.editMe} />
+          <FaTimes style={styles.deleteBtn} onClick={props.deleteMe} />
         </div>
       </div>
       <div style={styles.contentContainer}>

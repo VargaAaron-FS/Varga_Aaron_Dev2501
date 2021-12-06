@@ -63,9 +63,21 @@ class App extends Component {
     e.target.reset();
   };
 
+  removeItem = (key) => {
+    const newpCard = [...this.state.pCard];
+    newpCard.splice(key, 1);
+    this.setState(() => ({
+      pCard: newpCard,
+    }));
+  };
+
+  // Use filter method to remote item
+
   render() {
     let myList = this.state.pCard.map((element, i) => {
-      return <MyPost key={i} val={element} />;
+      return (
+        <MyPost key={i} val={element} deleteMe={() => this.removeItem(i)} />
+      );
     });
 
     return (
