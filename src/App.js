@@ -83,7 +83,8 @@ class App extends Component {
   // Try to use filter method to remove item instead of the above Splice method
   removeItem = (key) => {
     const newpCard = this.state.pCard.filter((post) => post.key !== key);
-    this.setState({ post: newpCard });
+    this.setState({ pCard: newpCard });
+    console.log(newpCard[key]); // This is logging the card that needs to be deleted! So find out how to delete it!
     console.log(newpCard);
   };
 
@@ -102,7 +103,9 @@ class App extends Component {
             <MyNav />
           </aside>
           <div style={styles.mainContentArea}>
-            <div style={{ opacity: this.state.opacity, cursor: this.state.cursor }}>
+            <div
+              style={{ opacity: this.state.opacity, cursor: this.state.cursor }}
+            >
               <MyForm
                 userName="Aaron"
                 getTitle={this.getTitle}
