@@ -42,7 +42,15 @@ class App extends Component {
         pImgAlt: "Dog",
       },
     ],
+    opacity: ".5",
+    cursor: "not-allowed",
   };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ opacity: "1", cursor: "default" });
+    }, 3000);
+  }
 
   getTitle = (e) => {
     this.setState({ pTitle: e.target.value });
@@ -63,15 +71,21 @@ class App extends Component {
     e.target.reset();
   };
 
-  removeItem = (key) => {
-    const newpCard = [...this.state.pCard];
-    newpCard.splice(key, 1);
-    this.setState(() => ({
-      pCard: newpCard,
-    }));
-  };
+  // Delete function using Splice method (mutates)
+  // removeItem = (key) => {
+  //   const newpCard = [...this.state.pCard];
+  //   newpCard.splice(key, 1);
+  //   this.setState(() => ({
+  //     pCard: newpCard,
+  //   }));
+  // };
 
-  // Use filter method to remote item
+  // Try to use filter method to remove item instead of the above Splice method
+  removeItem = (key) => {
+    const newpCard = this.state.pCard.filter((post) => post.key !== key);
+    this.setState({ post: newpCard });
+    console.log(newpCard);
+  };
 
   render() {
     let myList = this.state.pCard.map((element, i) => {
@@ -88,14 +102,16 @@ class App extends Component {
             <MyNav />
           </aside>
           <div style={styles.mainContentArea}>
-            <MyForm
-              userName="Aaron"
-              getTitle={this.getTitle}
-              getMsg={this.getMsg}
-              addItem={this.addItem}
-              buttonText="Add Post"
-              buttonType="submit"
-            />
+            <div style={{ opacity: this.state.opacity, cursor: this.state.cursor }}>
+              <MyForm
+                userName="Aaron"
+                getTitle={this.getTitle}
+                getMsg={this.getMsg}
+                addItem={this.addItem}
+                buttonText="Add Post"
+                buttonType="submit"
+              />
+            </div>
             {myList}
           </div>
           <aside style={styles.asideAds}>
