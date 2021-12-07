@@ -85,12 +85,11 @@ class App extends Component {
   //   }));
   // };
 
-  // Try to use filter method to remove item instead of the above Splice method
+  // Try to use filter method to remove item instead of the above Splice method so we do not mutate
   removeItem = (key) => {
-    const newpCard = this.state.pCard.filter((post) => post.key !== key);
-    this.setState({ pCard: newpCard });
-    console.log(newpCard[key]); // This is logging the card that needs to be deleted! So find out how to delete it!
-    console.log(newpCard);
+    this.setState({
+      pCard: this.state.pCard.filter((_, i) => i !== key)
+    });
   };
 
   render() {

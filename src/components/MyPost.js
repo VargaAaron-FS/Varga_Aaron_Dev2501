@@ -87,7 +87,6 @@ const styles = {
     width: "100%",
     maxHeight: "400px",
     objectFit: "cover",
-    cursor: "pointer",
     borderRadius: ".25rem",
     border: "2px solid #eee",
   },
