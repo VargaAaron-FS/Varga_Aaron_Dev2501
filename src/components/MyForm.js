@@ -13,7 +13,7 @@ const MyForm = (props) => {
         <input
           name="pTitle"
           value={props.pTitle}
-          onChange={props.getTitle}
+          onChange={props.getInput}
           style={styles.postTitle}
           type="text"
           placeholder="Enter your post title"
@@ -21,7 +21,7 @@ const MyForm = (props) => {
         <textarea
           name="pMsg"
           value={props.pMsg}
-          onChange={props.getMsg}
+          onChange={props.getInput}
           style={styles.textArea}
           placeholder="Write your post message"
         ></textarea>

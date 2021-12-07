@@ -4,11 +4,11 @@ import MyAvatar from "../components/MyAvatar";
 import ImageUrl from "../img/icons8-user-male.svg";
 
 // Icon(s)
-import { FaTimes, FaEdit } from "react-icons/fa";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
 
 const MyPost = (props) => {
   return (
-    <article style={styles.postContainer}>
+    <article key={props.i} style={styles.postContainer}>
       <div style={styles.buttonsContainer}>
         <div style={styles.userStyle}>
           <MyAvatar AvatarIcon={ImageUrl} AvatarAlt="User Avatar" />
@@ -17,7 +17,7 @@ const MyPost = (props) => {
         <div style={styles.iconsContainer}>
           {/* Close Icon */}
           <FaEdit style={styles.editBtn} onClick={props.editMe} />
-          <FaTimes style={styles.deleteBtn} onClick={props.deleteMe} />
+          <FaTrashAlt style={styles.deleteBtn} onClick={props.deleteMe} />
         </div>
       </div>
       <div style={styles.contentContainer}>

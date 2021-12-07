@@ -42,24 +42,29 @@ class App extends Component {
         pImgAlt: "Dog",
       },
     ],
+    adsCard: [
+      {
+        // Add ads info to pass here!
+      },
+    ],
     opacity: ".5",
     cursor: "not-allowed",
   };
 
+  // Fades form and does not allow cursor on form for 3 seconds on page load,
+  // then componentDidMount() brings form in full opacity with default cursor
   componentDidMount() {
     setTimeout(() => {
       this.setState({ opacity: "1", cursor: "default" });
     }, 3000);
   }
 
-  getTitle = (e) => {
-    this.setState({ pTitle: e.target.value });
+  // Grabs input from all input fields with this method
+  getInput = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
-  getMsg = (e) => {
-    this.setState({ pMsg: e.target.value });
-  };
-
+  // Adds post after form submission
   addItem = (e) => {
     e.preventDefault();
     this.setState({
@@ -108,8 +113,7 @@ class App extends Component {
             >
               <MyForm
                 userName="Aaron"
-                getTitle={this.getTitle}
-                getMsg={this.getMsg}
+                getInput={this.getInput}
                 addItem={this.addItem}
                 buttonText="Add Post"
                 buttonType="submit"
