@@ -9,7 +9,6 @@ import MyPost from "./components/MyPost";
 import MyForm from "./components/MyForm";
 
 // Images
-
 // - Ad images
 import PhoneAdImage from "./img/phone-ad.jpg";
 import ComputerAdImage from "./img/computer-ad.jpg";
@@ -44,9 +43,10 @@ class App extends Component {
     ],
     adsCard: [
       {
-        // Add ads info to pass here!
+        // TODO: Add ads info to pass here!
       },
     ],
+    // for componentDidMount()
     opacity: ".5",
     cursor: "not-allowed",
   };
@@ -76,26 +76,27 @@ class App extends Component {
     e.target.reset();
   };
 
-  // Delete function using Splice method (mutates)
-  // removeItem = (key) => {
-  //   const newpCard = [...this.state.pCard];
-  //   newpCard.splice(key, 1);
-  //   this.setState(() => ({
-  //     pCard: newpCard,
-  //   }));
-  // };
+  // TODO: Add edit function
+  editPost = (e) => {
+    // console.log("Edit Post");
+  };
 
-  // Try to use filter method to remove item instead of the above Splice method so we do not mutate
+  // Use filter method to remove item instead of the Splice method so we do not mutate!
   removeItem = (key) => {
     this.setState({
-      pCard: this.state.pCard.filter((_, i) => i !== key)
+      pCard: this.state.pCard.filter((_, i) => i !== key),
     });
   };
 
   render() {
-    let myList = this.state.pCard.map((element, i) => {
+    let myPosts = this.state.pCard.map((element, i) => {
       return (
-        <MyPost key={i} val={element} deleteMe={() => this.removeItem(i)} />
+        <MyPost
+          key={i}
+          val={element}
+          deleteMe={() => this.removeItem(i)}
+          editMe={() => this.editPost(i)}
+        />
       );
     });
 
@@ -118,7 +119,7 @@ class App extends Component {
                 buttonType="submit"
               />
             </div>
-            {myList}
+            {myPosts}
           </div>
           <aside style={styles.asideAds}>
             <MyAds
