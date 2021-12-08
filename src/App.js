@@ -1,13 +1,22 @@
+import SideNav from "./components/SideNav";
+
 export default function App() {
   return (
-    <div>
+    <div style={styles.appContainer}>
+      <SideNav />
       <h1 style={styles.h1}>Dashboard</h1>
     </div>
   );
 }
 
 const styles = {
+  appContainer: {
+    display: "flex",
+    padding: "0",
+  },
   h1: {
     color: "white",
+    margin: "1rem",
+    padding: "0",
   }
 }
