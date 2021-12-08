@@ -10,13 +10,13 @@ const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
       <img
-        src={props.adImageUrl}
-        alt={props.adImageAlt}
+        src={props.val.adImg}
+        alt={props.val.adImgAlt}
         style={styles.adImage}
       />
       <div style={styles.copyContainer}>
-        <h2 style={styles.h2}>{props.adHeadingText}</h2>
-        <p style={styles.paragraphText}>{props.adParaText}</p>
+        <h2 style={styles.h2}>{props.val.adTitle}</h2>
+        <p style={styles.paragraphText}>{props.val.adDescription}</p>
         <div style={styles.buttonContainer}>
           <ButtonLightTextOnly
             buttonText="View"

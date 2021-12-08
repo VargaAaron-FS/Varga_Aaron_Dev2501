@@ -41,9 +41,20 @@ class App extends Component {
         pImgAlt: "Dog",
       },
     ],
-    adsCard: [
+    adCard: [
       {
-        // TODO: Add ads info to pass here!
+        adImg: PhoneAdImage,
+        adImgAlt: "New iPhone 13 Ad",
+        adTitle: "Shop the new iPhone 13",
+        adDescription:
+          "The biggest Pro camera system upgrade ever. Super Retina XDR display with ProMotion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Superfast 5G. Durable design and the best battery life ever in an iPhone.",
+      },
+      {
+        adImg: ComputerAdImage,
+        adImgAlt: "New MacBook Pro Ad",
+        adTitle: "Shop the new MacBook Pro",
+        adDescription:
+          "The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.",
       },
     ],
     // for componentDidMount()
@@ -78,7 +89,7 @@ class App extends Component {
 
   // TODO: Add edit function
   editPost = (e) => {
-    // console.log("Edit Post");
+    // console.log(this.state.pCard[e]);
   };
 
   // Use filter method to remove item instead of the Splice method so we do not mutate!
@@ -98,6 +109,10 @@ class App extends Component {
           editMe={() => this.editPost(i)}
         />
       );
+    });
+
+    let myAds = this.state.adCard.map((element, i) => {
+      return <MyAds key={i} val={element} />;
     });
 
     return (
@@ -121,20 +136,7 @@ class App extends Component {
             </div>
             {myPosts}
           </div>
-          <aside style={styles.asideAds}>
-            <MyAds
-              adImageUrl={PhoneAdImage}
-              adImageAlt="New iPhone 13 Ad"
-              adHeadingText="Shop the new iPhone 13"
-              adParaText="The biggest Pro camera system upgrade ever. Super Retina XDR display with ProMotion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Superfast 5G. Durable design and the best battery life ever in an iPhone."
-            />
-            <MyAds
-              adImageUrl={ComputerAdImage}
-              adImageAlt="New MacBook Pro Ad"
-              adHeadingText="Shop the new MacBook Pro"
-              adParaText="The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life."
-            />
-          </aside>
+          <aside style={styles.asideAds}>{myAds}</aside>
         </main>
         <MyFooter />
       </div>
