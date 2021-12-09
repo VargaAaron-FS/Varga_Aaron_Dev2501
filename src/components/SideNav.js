@@ -18,7 +18,7 @@ const styles = {
     padding: "1rem",
     backgroundColor: "black",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
   },
   navIcons: {
     fontSize: "1.5rem",
