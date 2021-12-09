@@ -25,7 +25,7 @@ const MyForm = (props) => {
           style={styles.textArea}
           placeholder="Write your post message"
         ></textarea>
-        {/* Does not work, just added it to remind me to work on image upload later */}
+        {/* Does not work, just added it to remind me to work on image upload later You will need a server or local storage to hold it*/}
         <input type="file" style={styles.imgUpload} />
       </div>
       <div style={styles.buttonContainer}>

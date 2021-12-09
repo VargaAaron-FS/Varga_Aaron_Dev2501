@@ -11,7 +11,7 @@ import { FaSearch, FaBell } from "react-icons/fa";
 import ImageUrl from "../img/icons8-user-male.svg";
 import MyAvatarDropdown from "./MyAvatarDropdown";
 
-// Search button click event
+// Search button click event You would do this different. You do not want to talk to the dom.  You can get throught using the math method.
 const handleSearchBtnClick = () => {
   if (document.querySelector(".searchInputField").value === "") {
     document.querySelector(".searchInputField").focus();
