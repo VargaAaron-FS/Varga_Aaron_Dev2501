@@ -13,10 +13,12 @@ const styles = {
   appContainer: {
     display: "flex",
     padding: "0",
+    backgroundColor: "#eee",
   },
   h1: {
-    color: "white",
-    margin: "1rem",
-    padding: "0",
+    color: "black",
+    margin: "0",
+    padding: "1rem",
+    lineHeight: "1.5rem",
   }
 }

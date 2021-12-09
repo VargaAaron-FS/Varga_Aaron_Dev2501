@@ -5,7 +5,7 @@ export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
       <nav>
-        <MdDashboard />
+        <MdDashboard style={styles.navIcons} />
       </nav>
     </aside>
   );
@@ -14,10 +14,14 @@ export default function SideNav() {
 const styles = {
   sideNavContainer: {
     color: "white",
-    height: "100vh",
+    height: "calc(100vh - 2rem)",
     padding: "1rem",
     backgroundColor: "black",
     display: "flex",
     flexDirection: "row",
-  }
-}
+  },
+  navIcons: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+  },
+};
