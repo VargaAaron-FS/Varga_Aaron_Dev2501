@@ -1,11 +1,15 @@
 // Import icons for nav
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdAssessment, MdAttachMoney, MdSavings, MdCreditCard } from "react-icons/md";
 
 export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
-      <nav>
+      <nav style={styles.navContainer}>
         <MdDashboard style={styles.navIcons} />
+        <MdAssessment style={styles.navIcons} />
+        <MdAttachMoney style={styles.navIcons} />
+        <MdSavings style={styles.navIcons} />
+        <MdCreditCard style={styles.navIcons} />
       </nav>
     </aside>
   );
@@ -13,12 +17,17 @@ export default function SideNav() {
 
 const styles = {
   sideNavContainer: {
-    color: "white",
+    color: "lightgreen",
     height: "calc(100vh - 2rem)",
     padding: "1rem",
-    backgroundColor: "black",
+    backgroundColor: "#333",
     display: "flex",
     flexDirection: "column",
+  },
+  navContainer: {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: "1.5rem",
   },
   navIcons: {
     fontSize: "1.5rem",
