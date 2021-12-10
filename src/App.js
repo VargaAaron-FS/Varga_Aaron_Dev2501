@@ -10,13 +10,20 @@ export default function App() {
       <div style={styles.headerMainContainer}>
         <MyHeader />
         <main style={styles.mainContainer}>
-          <div style={styles.pTitleContainer}>
+          <div style={styles.dataContainer}>
             <h1 style={styles.dashH1}>Dashboard</h1>
           </div>
-          <div style={styles.pTitleContainer}>
-            <h1 style={styles.dashH1}>
-              Dashboard
-            </h1>
+          <div style={styles.dataContainer}>
+            <h1 style={styles.reportsH1}>Reports</h1>
+          </div>
+          <div style={styles.dataContainer}>
+            <h1 style={styles.incomeH1}>Income</h1>
+          </div>
+          <div style={styles.dataContainer}>
+            <h1 style={styles.savingsH1}>Savings</h1>
+          </div>
+          <div style={styles.dataContainer}>
+            <h1 style={styles.spendingH1}>Spending</h1>
           </div>
         </main>
         <MyFooter />
@@ -41,17 +48,44 @@ const styles = {
   mainContainer: {
     margin: "1rem",
     display: "flex",
-    flexDirection: "row",
-    columnGap: "1rem",
+    flexDirection: "column",
+    rowGap: "1rem",
   },
-  pTitleContainer: {
+  dataContainer: {
     display: "flex",
     backgroundColor: "#fff",
     padding: "1rem",
-    width: "50%",
   },
   dashH1: {
     color: "#073b4c",
+    margin: "0",
+    lineHeight: "1.5rem",
+    fontSize: "1.5rem",
+    display: "flex",
+  },
+  reportsH1: {
+    color: "#118ab2",
+    margin: "0",
+    lineHeight: "1.5rem",
+    fontSize: "1.5rem",
+    display: "flex",
+  },
+  incomeH1: {
+    color: "#06d6a0",
+    margin: "0",
+    lineHeight: "1.5rem",
+    fontSize: "1.5rem",
+    display: "flex",
+  },
+  savingsH1: {
+    color: "#ffd166",
+    margin: "0",
+    lineHeight: "1.5rem",
+    fontSize: "1.5rem",
+    display: "flex",
+  },
+  spendingH1: {
+    color: "#ef476f",
     margin: "0",
     lineHeight: "1.5rem",
     fontSize: "1.5rem",

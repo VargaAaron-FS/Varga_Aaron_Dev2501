@@ -37,7 +37,6 @@ const styles = {
     lineHeight: "2rem",
   },
   copyIcon: {
-    marginRight: ".05rem",
     fontSize: "1rem",
     marginBottom: "-.15rem",
   },
