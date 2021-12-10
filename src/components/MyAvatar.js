@@ -1,12 +1,9 @@
 // Import icons for nav
 import { MdPerson } from "react-icons/md";
 
-import ReactTooltip from "react-tooltip";
-
 export default function MyAvatar() {
   return (
-    <div style={styles.avatarContainer} data-tip="Settings">
-      <ReactTooltip place="left" type="dark" effect="solid" />
+    <div style={styles.avatarContainer}>
       <MdPerson style={styles.myAvatar} />
     </div>
   );

@@ -10,6 +10,7 @@ import Income from "./pages/Income";
 import Savings from "./pages/Savings";
 import Spending from "./pages/Spending";
 import Settings from "./pages/Settings";
+import LogOut from "./pages/LogOut";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="savings" element={<Savings />} />
             <Route path="spending" element={<Spending />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="logout" element={<LogOut />} />
           </Routes>
 
           {/* <div style={styles.dataContainer}>

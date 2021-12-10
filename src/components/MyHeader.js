@@ -2,18 +2,20 @@
 import MyLogo from "./MyLogo";
 import MyAvatar from "./MyAvatar";
 
-import ReactTooltip from "react-tooltip";
+import { MdLogout } from "react-icons/md";
 
 import { Link } from "react-router-dom";
 
 export default function MyHeader() {
   return (
     <header style={styles.headerContainer}>
-      <ReactTooltip place="right" type="dark" effect="solid" />
       <MyLogo />
       <nav style={styles.navContainer}>
         <Link to="/settings">
           <MyAvatar />
+        </Link>
+        <Link to="/logout">
+          <MdLogout style={styles.logOutIcon} />
         </Link>
       </nav>
     </header>
@@ -33,6 +35,7 @@ const styles = {
   navContainer: {
     display: "flex",
     alignItems: "center",
+    columnGap: "1rem",
   },
   logoContainer: {
     display: "flex",
@@ -59,5 +62,9 @@ const styles = {
     borderRadius: "50%",
     backgroundColor: "#333",
     color: "#fff",
+  },
+  logOutIcon: {
+    cursor: "pointer",
+    color: "#333",
   },
 };

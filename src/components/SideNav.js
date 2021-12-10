@@ -7,29 +7,26 @@ import {
   MdCreditCard,
 } from "react-icons/md";
 
-import ReactTooltip from "react-tooltip";
-
 import { Link } from "react-router-dom";
 
 export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
       <nav style={styles.navContainer}>
-        <ReactTooltip place="right" type="dark" effect="solid" />
         <Link to="/dashboard">
-          <MdDashboard style={styles.dashIcon} data-tip="Dashboard" />
+          <MdDashboard style={styles.dashIcon} />
         </Link>
         <Link to="/reports">
-          <MdAssessment style={styles.reportsIcon} data-tip="Reports" />
+          <MdAssessment style={styles.reportsIcon} />
         </Link>
         <Link to="/income">
-          <MdAttachMoney style={styles.incomeIcon} data-tip="Income" />
+          <MdAttachMoney style={styles.incomeIcon} />
         </Link>
         <Link to="/savings">
-          <MdSavings style={styles.savingsIcon} data-tip="Savings" />
+          <MdSavings style={styles.savingsIcon} />
         </Link>
         <Link to="/spending">
-          <MdCreditCard style={styles.spendingIcon} data-tip="Spending" />
+          <MdCreditCard style={styles.spendingIcon} />
         </Link>
       </nav>
     </aside>
