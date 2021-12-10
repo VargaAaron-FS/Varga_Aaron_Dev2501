@@ -5,11 +5,11 @@ export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
       <nav style={styles.navContainer}>
-        <MdDashboard style={styles.navIcons} />
-        <MdAssessment style={styles.navIcons} />
-        <MdAttachMoney style={styles.navIcons} />
-        <MdSavings style={styles.navIcons} />
-        <MdCreditCard style={styles.navIcons} />
+        <MdDashboard style={styles.dashIcon} />
+        <MdAssessment style={styles.reportsIcon} />
+        <MdAttachMoney style={styles.incomeIcon} />
+        <MdSavings style={styles.savingsIcon} />
+        <MdCreditCard style={styles.spendingIcon} />
       </nav>
     </aside>
   );
@@ -17,12 +17,13 @@ export default function SideNav() {
 
 const styles = {
   sideNavContainer: {
-    color: "lightgreen",
+    color: "#000",
     height: "calc(100vh - 2rem)",
-    backgroundColor: "#333",
+    backgroundColor: "#fff",
     display: "flex",
     flexDirection: "column",
     paddingTop: "1.5rem",
+    borderRight: "2px solid #eee",
   },
   navContainer: {
     display: "flex",
@@ -33,5 +34,35 @@ const styles = {
     fontSize: "1.5rem",
     cursor: "pointer",
     padding: "0 1rem",
+  },
+  dashIcon: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    padding: "0 1rem",
+    color: "#073b4c",
+  },
+  reportsIcon: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    padding: "0 1rem",
+    color: "#118ab2",
+  },
+  incomeIcon: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    padding: "0 1rem",
+    color: "#06d6a0",
+  },
+  savingsIcon: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    padding: "0 1rem",
+    color: "#ffd166",
+  },
+  spendingIcon: {
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    padding: "0 1rem",
+    color: "#ef476f",
   },
 };

@@ -6,8 +6,11 @@ export default function App() {
     <div style={styles.appContainer}>
       <SideNav />
       <main style={styles.main}>
-        <MyHeader />
-        <h1 style={styles.h1}>Dashboard</h1>
+      <MyHeader />
+        <div style={styles.contentContainer}>
+          
+          <h1 style={styles.dashH1}>Dashboard</h1>
+        </div>
       </main>
     </div>
   );
@@ -18,17 +21,22 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     padding: "0",
-    backgroundColor: "#eee",
+    backgroundColor: "#fff",
   },
   main: {
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    backgroundColor: "#eee",
   },
-  h1: {
-    color: "black",
-    margin: "0",
+  contentContainer: {
+    backgroundColor: "#fff",
     padding: "1rem",
+    margin: "1rem",
+  },
+  dashH1: {
+    color: "#073b4c",
+    margin: "0",
     lineHeight: "1.5rem",
     fontSize: "1.5rem",
   },

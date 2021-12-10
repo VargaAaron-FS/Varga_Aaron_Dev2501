@@ -14,14 +14,14 @@ export default function MyHeader() {
 
 const styles = {
   headerContainer: {
-    color: "#333",
+    color: "#000",
     padding: "1rem",
-    backgroundColor: "lightgreen",
+    backgroundColor: "#fff",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    borderBottom: "2px solid #333",
+    borderBottom: "2px solid #eee",
   },
   navContainer: {
     display: "flex",
@@ -38,7 +38,7 @@ const styles = {
     cursor: "pointer",
     padding: ".5rem",
     borderRadius: "50%",
-    backgroundColor: "#333",
-    color: "lightgreen",
+    backgroundColor: "#000",
+    color: "#fff",
   },
 };
