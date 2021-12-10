@@ -15,12 +15,22 @@ export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
       <nav style={styles.navContainer}>
-        <Link to="/dashboard"><ReactTooltip place="right" type="dark" effect="solid" /></Link>
-        <MdDashboard style={styles.dashIcon} data-tip="Dashboard" />
-        <MdAssessment style={styles.reportsIcon} data-tip="Reports" />
-        <MdAttachMoney style={styles.incomeIcon} data-tip="Income" />
-        <MdSavings style={styles.savingsIcon} data-tip="Savings" />
-        <MdCreditCard style={styles.spendingIcon} data-tip="Spending" />
+        <ReactTooltip place="right" type="dark" effect="solid" />
+        <Link to="/dashboard">
+          <MdDashboard style={styles.dashIcon} data-tip="Dashboard" />
+        </Link>
+        <Link to="/reports">
+          <MdAssessment style={styles.reportsIcon} data-tip="Reports" />
+        </Link>
+        <Link to="/income">
+          <MdAttachMoney style={styles.incomeIcon} data-tip="Income" />
+        </Link>
+        <Link to="/savings">
+          <MdSavings style={styles.savingsIcon} data-tip="Savings" />
+        </Link>
+        <Link to="/spending">
+          <MdCreditCard style={styles.spendingIcon} data-tip="Spending" />
+        </Link>
       </nav>
     </aside>
   );

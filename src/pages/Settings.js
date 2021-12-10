@@ -1,8 +1,8 @@
 
-export default function Savings() {
+export default function Settings() {
   return (
     <section style={styles.dashContainer}>
-      <p>This is my Savings!</p>
+      <p>This is my Settings!</p>
     </section>
   );
 }

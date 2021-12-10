@@ -4,13 +4,17 @@ import MyAvatar from "./MyAvatar";
 
 import ReactTooltip from "react-tooltip";
 
+import { Link } from "react-router-dom";
+
 export default function MyHeader() {
   return (
     <header style={styles.headerContainer}>
       <ReactTooltip place="right" type="dark" effect="solid" />
       <MyLogo />
       <nav style={styles.navContainer}>
-        <MyAvatar />
+        <Link to="/settings">
+          <MyAvatar />
+        </Link>
       </nav>
     </header>
   );
