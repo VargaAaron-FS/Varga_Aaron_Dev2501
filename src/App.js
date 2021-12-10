@@ -1,7 +1,10 @@
 import SideNav from "./components/SideNav";
 import MyHeader from "./components/MyHeader";
 import MyFooter from "./components/MyFooter";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
+// Pages
+import Dashboard from "./pages/Dashboard";
 
 export default function App() {
   return (
@@ -10,8 +13,15 @@ export default function App() {
       <div style={styles.headerMainContainer}>
         <MyHeader />
         <main style={styles.mainContainer}>
-          <div style={styles.dataContainer}>
+
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
+          </Routes>
+
+          {/* <div style={styles.dataContainer}>
             <h1 style={styles.dashH1}>Dashboard</h1>
+
           </div>
           <div style={styles.dataContainer}>
             <h1 style={styles.reportsH1}>Reports</h1>
@@ -24,7 +34,7 @@ export default function App() {
           </div>
           <div style={styles.dataContainer}>
             <h1 style={styles.spendingH1}>Spending</h1>
-          </div>
+          </div> */}
         </main>
         <MyFooter />
       </div>
