@@ -1,16 +1,19 @@
 // Import icons for nav
 import { MdPerson } from "react-icons/md";
-import { GiDolphin } from "react-icons/gi";
+
+// Components
+import MyLogo from "./MyLogo";
+import MyAvatar from "./MyAvatar";
+
+import ReactTooltip from "react-tooltip";
 
 export default function MyHeader() {
   return (
     <header style={styles.headerContainer}>
-      <div style={styles.logoContainer}>
-        <GiDolphin style={styles.dolfinLogo} />
-        <h1 style={styles.h1}>Dolfin</h1>
-      </div>
+      <ReactTooltip place="right" type="dark" effect="solid" />
+      <MyLogo />
       <nav style={styles.navContainer}>
-        <MdPerson style={styles.headerAvatar} />
+        <MyAvatar />
       </nav>
     </header>
   );
@@ -32,6 +35,7 @@ const styles = {
   },
   logoContainer: {
     display: "flex",
+    cursor: "pointer",
   },
   h1: {
     margin: "0",

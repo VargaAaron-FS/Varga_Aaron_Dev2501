@@ -1,15 +1,23 @@
 // Import icons for nav
-import { MdDashboard, MdAssessment, MdAttachMoney, MdSavings, MdCreditCard } from "react-icons/md";
+import {
+  MdDashboard,
+  MdAssessment,
+  MdAttachMoney,
+  MdSavings,
+  MdCreditCard,
+} from "react-icons/md";
+import ReactTooltip from "react-tooltip";
 
 export default function SideNav() {
   return (
     <aside style={styles.sideNavContainer}>
       <nav style={styles.navContainer}>
-        <MdDashboard style={styles.dashIcon} />
-        <MdAssessment style={styles.reportsIcon} />
-        <MdAttachMoney style={styles.incomeIcon} />
-        <MdSavings style={styles.savingsIcon} />
-        <MdCreditCard style={styles.spendingIcon} />
+        <ReactTooltip place="right" type="dark" effect="solid" />
+        <MdDashboard style={styles.dashIcon} data-tip="Dashboard" />
+        <MdAssessment style={styles.reportsIcon} data-tip="Reports" />
+        <MdAttachMoney style={styles.incomeIcon} data-tip="Income" />
+        <MdSavings style={styles.savingsIcon} data-tip="Savings" />
+        <MdCreditCard style={styles.spendingIcon} data-tip="Spending" />
       </nav>
     </aside>
   );
