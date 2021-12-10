@@ -19,10 +19,10 @@ const styles = {
   sideNavContainer: {
     color: "lightgreen",
     height: "calc(100vh - 2rem)",
-    padding: "1rem",
     backgroundColor: "#333",
     display: "flex",
     flexDirection: "column",
+    paddingTop: "1.5rem",
   },
   navContainer: {
     display: "flex",
@@ -32,5 +32,6 @@ const styles = {
   navIcons: {
     fontSize: "1.5rem",
     cursor: "pointer",
+    padding: "0 1rem",
   },
 };
