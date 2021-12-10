@@ -6,6 +6,7 @@ export default function MyLogo() {
       <div style={styles.logoContainer}>
         <GiDolphin style={styles.dolfinLogo} />
         <h1 style={styles.logoH1}>Dolfin</h1>
+        {/* "Dolfin" is a play on words I thought of combining "Dollar" and "Financial" and mashing them up to create the word "Dolphin" but spelled "Dolfin" - Dollar + Financial + Tech, LLC or something like that long form. Just tried to have fun with making a real name for the app! */}
       </div>
   );
 }

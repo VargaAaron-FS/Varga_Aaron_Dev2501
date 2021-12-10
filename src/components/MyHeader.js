@@ -1,6 +1,3 @@
-// Import icons for nav
-import { MdPerson } from "react-icons/md";
-
 // Components
 import MyLogo from "./MyLogo";
 import MyAvatar from "./MyAvatar";

@@ -1,17 +1,18 @@
 import SideNav from "./components/SideNav";
 import MyHeader from "./components/MyHeader";
+import MyFooter from "./components/MyFooter";
 
 export default function App() {
   return (
     <div style={styles.appContainer}>
       <SideNav />
-      <main style={styles.main}>
-      <MyHeader />
-        <div style={styles.contentContainer}>
-          
+      <div style={styles.headerMainContainer}>
+        <MyHeader />
+        <main style={styles.mainContainer}>
           <h1 style={styles.dashH1}>Dashboard</h1>
-        </div>
-      </main>
+        </main>
+        <MyFooter />
+      </div>
     </div>
   );
 }
@@ -23,13 +24,13 @@ const styles = {
     padding: "0",
     backgroundColor: "#fff",
   },
-  main: {
+  headerMainContainer: {
     display: "flex",
     flexDirection: "column",
     width: "100%",
     backgroundColor: "#eee",
   },
-  contentContainer: {
+  mainContainer: {
     backgroundColor: "#fff",
     padding: "1rem",
     margin: "1rem",

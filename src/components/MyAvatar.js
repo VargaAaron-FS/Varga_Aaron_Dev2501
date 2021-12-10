@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 export default function MyAvatar() {
   return (
     <div style={styles.avatarContainer} data-tip="Settings">
-      <ReactTooltip place="right" type="dark" effect="solid" />
+      <ReactTooltip place="left" type="dark" effect="solid" />
       <MdPerson style={styles.myAvatar} />
     </div>
   );
