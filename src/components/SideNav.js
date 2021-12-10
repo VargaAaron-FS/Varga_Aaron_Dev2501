@@ -26,7 +26,7 @@ export default function SideNav() {
 const styles = {
   sideNavContainer: {
     color: "#000",
-    height: "calc(100vh - 2rem)",
+    height: "calc(100vh - 1.5rem)",
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "column",

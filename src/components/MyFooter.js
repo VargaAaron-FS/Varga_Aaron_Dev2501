@@ -1,6 +1,6 @@
 // Import icon(s)
 import { MdCopyright } from "react-icons/md";
-import { VscGithub } from "react-icons/vsc";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function MyFooter() {
   return (
@@ -10,7 +10,9 @@ export default function MyFooter() {
           Technology, LLC. All rights reserved.
         </p>
         <div style={styles.footerIconsContainer}>
-          <VscGithub style={styles.footerIcons} />
+          <FaFacebook style={styles.footerIcons} />
+          <FaTwitter style={styles.footerIcons} />
+          <FaInstagram style={styles.footerIcons} />
         </div>
     </footer>
   );
@@ -19,29 +21,38 @@ export default function MyFooter() {
 const styles = {
   footerContainer: {
     padding: "1rem",
-    display: "flex",
-    height: "100%",
-    alignItems: "flex-end",
-    justifyContent: "space-between",
+    display: "inline",
+    position: "absolute",
+    bottom: "0rem",
+    width: "calc(100% - 90px)",
+    height: "2rem",
   },
   footerP: {
     margin: "0",
     padding: "0",
     fontSize: "1rem",
     color: "#333",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    display: "inline",
+    float: "left",
+    lineHeight: "2rem",
   },
   copyIcon: {
-    marginRight: ".25rem",
+    marginRight: ".05rem",
     fontSize: "1rem",
+    marginBottom: "-.15rem",
   },
   footerIconsContainer: {
-    display: "flex",
-    fontSize: "1.5rem",
+    display: "inline",
+    float: "right",
+    textAlign: "right",
+    lineHeight: "2rem",
+    marginRight: "-1rem",
   },
   footerIcons: {
     cursor: "pointer",
+    marginBottom: "-.25rem",
+    fontSize: "1.25rem",
+    color: "#333",
+    marginRight: "1rem",
   },
 };
