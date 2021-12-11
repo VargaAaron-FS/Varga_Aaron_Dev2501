@@ -6,7 +6,7 @@ export default function Dashboard() {
     <Section>
       <FlexboxContainer>
         <FlexboxItem>
-          <H1 style={{ color: "#073b4c" }}>Dashboard</H1>
+          <H1 style={{ color: "#333" }}>Dashboard</H1>
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>
@@ -16,36 +16,12 @@ export default function Dashboard() {
           {/* Add 2 rows with 2 columns for a summary view of reports, income, savings, and spending. */}
         </FlexboxItem>
       </FlexboxContainer>
-      <FlexboxContainer>
-        <FlexboxItem>
-          <H1 style={{ color: "#118ab2" }}>Reports</H1>
-        </FlexboxItem>
-        <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
-        </FlexboxItem>
-      </FlexboxContainer>
-      <FlexboxContainer>
-        <FlexboxItem>
-          <H1 style={{ color: "#ffd166" }}>Savings</H1>
-        </FlexboxItem>
-        <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
-        </FlexboxItem>
-      </FlexboxContainer>
-      <FlexboxContainer>
-        <FlexboxItem>
-          <H1 style={{ color: "#ef476f" }}>Spending</H1>
-        </FlexboxItem>
-        <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
-        </FlexboxItem>
-      </FlexboxContainer>
     </Section>
   );
 }
 
 // {
-  /* const Button = styled.button`
+/* const Button = styled.button`
   background: transparent;
   border-radius: 3px;
   border: 2px solid palevioletred;

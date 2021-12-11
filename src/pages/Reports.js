@@ -1,21 +1,46 @@
 import React from "react";
+import styled from "styled-components";
 
 export default function Reports() {
   return (
-    <section style={styles.dashContainer}>
-      <p>This is my Reports!</p>
-    </section>
+    <Section>
+      <FlexboxContainer>
+        <FlexboxItem>
+          <H1 style={{ color: "#118ab2" }}>Reports</H1>
+        </FlexboxItem>
+        <FlexboxItem>
+          <Paragraph>This is the Dashboard!</Paragraph>
+        </FlexboxItem>
+      </FlexboxContainer>
+    </Section>
   );
 }
 
-const styles = {
-  dashContainer: {
-    color: "#000",
-    height: "calc(100vh - 1.5rem)",
-    backgroundColor: "#fff",
-    display: "flex",
-    flexDirection: "column",
-    paddingTop: "1.5rem",
-    borderRight: "2px solid #eee",
-  },
-};
+const FlexboxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+`;
+
+const FlexboxItem = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1rem;
+`;
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+`;
+
+const H1 = styled.h1`
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+`;

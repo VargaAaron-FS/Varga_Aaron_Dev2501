@@ -19,13 +19,13 @@ const styles = {
   logoH1: {
     margin: "0",
     padding: "0",
-    lineHeight: "1.5rem",
-    fontSize: "1.5rem",
+    lineHeight: "2rem",
+    fontSize: "2rem",
     color: "#333",
   },
   dolfinLogo: {
-    fontSize: "1.5rem",
-    marginRight: "-.75rem",
+    fontSize: "2rem",
+    marginRight: "-1rem",
     marginTop: "-.15rem",
     color: "#fbb1bd",
     zIndex: "1",

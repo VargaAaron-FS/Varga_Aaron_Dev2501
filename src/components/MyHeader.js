@@ -26,7 +26,7 @@ export default function MyHeader() {
 
 const styles = {
   headerContainer: {
-    padding: "1rem",
+    padding: "1.25rem 1rem",
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "row",
