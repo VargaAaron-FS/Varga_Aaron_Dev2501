@@ -24,7 +24,6 @@ export default function App() {
       <div style={styles.headerMainContainer}>
         <MyHeader />
         <main style={styles.mainContainer}>
-
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />

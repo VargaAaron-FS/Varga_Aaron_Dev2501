@@ -25,7 +25,6 @@ const styles = {
     position: "absolute",
     bottom: "0rem",
     width: "calc(100% - 90px)",
-    height: "2rem",
   },
   footerP: {
     margin: "0",
