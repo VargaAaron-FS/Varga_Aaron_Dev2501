@@ -6,7 +6,19 @@ export default function Dashboard() {
     <Section>
       <FlexboxContainer>
         <FlexboxItem>
-          <H1 style={{color: "#073b4c",}}>Dashboard</H1>
+          <H1 style={{ color: "#073b4c" }}>Dashboard</H1>
+        </FlexboxItem>
+        <FlexboxItem>
+          <Paragraph>
+            This is the Dashboard! This is where you will get a summary view of
+            your financial categories.
+          </Paragraph>
+          {/* Add 2 rows with 2 columns for a summary view of reports, income, savings, and spending. */}
+        </FlexboxItem>
+      </FlexboxContainer>
+      <FlexboxContainer>
+        <FlexboxItem>
+          <H1 style={{ color: "#118ab2" }}>Reports</H1>
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>This is the Dashboard!</Paragraph>
@@ -14,7 +26,7 @@ export default function Dashboard() {
       </FlexboxContainer>
       <FlexboxContainer>
         <FlexboxItem>
-          <H1 style={{color: "#118ab2",}}>Reports</H1>
+          <H1 style={{ color: "#ffd166" }}>Savings</H1>
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>This is the Dashboard!</Paragraph>
@@ -22,23 +34,7 @@ export default function Dashboard() {
       </FlexboxContainer>
       <FlexboxContainer>
         <FlexboxItem>
-          <H1 style={{color: "#06d6a0",}}>Income</H1>
-        </FlexboxItem>
-        <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
-        </FlexboxItem>
-      </FlexboxContainer>
-      <FlexboxContainer>
-        <FlexboxItem>
-          <H1 style={{color: "#ffd166",}}>Savings</H1>
-        </FlexboxItem>
-        <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
-        </FlexboxItem>
-      </FlexboxContainer>
-      <FlexboxContainer>
-        <FlexboxItem>
-          <H1 style={{color: "#ef476f",}}>Spending</H1>
+          <H1 style={{ color: "#ef476f" }}>Spending</H1>
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>This is the Dashboard!</Paragraph>
@@ -48,7 +44,7 @@ export default function Dashboard() {
   );
 }
 
-{
+// {
   /* const Button = styled.button`
   background: transparent;
   border-radius: 3px;
@@ -62,7 +58,7 @@ export default function Dashboard() {
     font-weight: 700;
   }
 `; */
-}
+// }
 
 const FlexboxContainer = styled.div`
   display: flex;
