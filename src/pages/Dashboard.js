@@ -10,10 +10,17 @@ export default function Dashboard() {
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>
-            This is the Dashboard! This is where you will get a summary view of
-            your financial categories.
+            Hello, Aaron! Here is your current financial summary.
           </Paragraph>
-          {/* Add 2 rows with 2 columns for a summary view of reports, income, savings, and spending. */}
+          {/* Add 2 rows with 2 columns for a summary view of reports, income, savings, and spending. Use CSS grid. */}
+        </FlexboxItem>
+        <FlexboxItem>
+          <Grid>
+            <GridItem>This is a grid item!</GridItem>
+            <GridItem>This is a grid item!</GridItem>
+            <GridItem>This is a grid item!</GridItem>
+            <GridItem>This is a grid item!</GridItem>
+          </Grid>
         </FlexboxItem>
       </FlexboxContainer>
     </Section>
@@ -63,4 +70,16 @@ const H1 = styled.h1`
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  column-gap: 1rem;
+  row-gap: 1rem;
+`;
+
+const GridItem = styled.div`
+  display: grid;
 `;

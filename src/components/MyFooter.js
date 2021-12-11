@@ -24,7 +24,7 @@ const styles = {
     display: "inline",
     position: "absolute",
     bottom: "0rem",
-    width: "calc(100% - 90px)",
+    width: "calc(100% - 98px)",
   },
   footerP: {
     margin: "0",
