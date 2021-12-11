@@ -4,7 +4,7 @@ import React from "react";
 import MyLogo from "./MyLogo";
 import MyAvatar from "./MyAvatar";
 
-import { MdLogout } from "react-icons/md";
+import { MdNotifications, MdLogout } from "react-icons/md";
 
 import { Link } from "react-router-dom";
 
@@ -13,11 +13,14 @@ export default function MyHeader() {
     <header style={styles.headerContainer}>
       <MyLogo />
       <nav style={styles.navContainer}>
+      <Link to="/alerts">
+          <MdNotifications style={styles.headerIcons} />
+        </Link>
         <Link to="/settings">
           <MyAvatar />
         </Link>
         <Link to="/logout">
-          <MdLogout style={styles.logOutIcon} />
+          <MdLogout style={styles.headerIcons} />
         </Link>
       </nav>
     </header>
@@ -65,8 +68,9 @@ const styles = {
     backgroundColor: "#333",
     color: "#fff",
   },
-  logOutIcon: {
+  headerIcons: {
     cursor: "pointer",
     color: "#333",
+    fontSize: "1.5rem",
   },
 };

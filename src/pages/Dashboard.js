@@ -12,14 +12,33 @@ export default function Dashboard() {
           <Paragraph>
             Hello, Aaron! Here is your current financial summary.
           </Paragraph>
-          {/* Add 2 rows with 2 columns for a summary view of reports, income, savings, and spending. Use CSS grid. */}
         </FlexboxItem>
         <FlexboxItem>
           <Grid>
-            <GridItem>This is a grid item!</GridItem>
-            <GridItem>This is a grid item!</GridItem>
-            <GridItem>This is a grid item!</GridItem>
-            <GridItem>This is a grid item!</GridItem>
+            <GridItem>
+              <H2 style={{ color: "#118ab2" }}>Reports</H2>
+              <ChartContainer style={{ border: "2px solid #118ab2" }}>
+                Chart goes here!
+              </ChartContainer>
+            </GridItem>
+            <GridItem>
+              <H2 style={{ color: "#06d6a0" }}>Income</H2>
+              <ChartContainer style={{ border: "2px solid #06d6a0" }}>
+                Chart goes here!
+              </ChartContainer>
+            </GridItem>
+            <GridItem>
+              <H2 style={{ color: "#EA638C" }}>Savings</H2>
+              <ChartContainer style={{ border: "2px solid #EA638C" }}>
+                Chart goes here!
+              </ChartContainer>
+            </GridItem>
+            <GridItem>
+              <H2 style={{ color: "#ffcb1b" }}>Spending</H2>
+              <ChartContainer style={{ border: "2px solid #ffcb1b" }}>
+                Chart goes here!
+              </ChartContainer>
+            </GridItem>
           </Grid>
         </FlexboxItem>
       </FlexboxContainer>
@@ -27,27 +46,11 @@ export default function Dashboard() {
   );
 }
 
-// {
-/* const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0.5em 1em;
-  padding: 0.25em 1em;
-  cursor: pointer;
-   &:hover {
-    color: red;
-    font-weight: 700;
-  }
-`; */
-// }
-
 const FlexboxContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 `;
 
 const FlexboxItem = styled.div`
@@ -68,18 +71,33 @@ const Section = styled.section`
 
 const H1 = styled.h1`
   font-size: 2rem;
+  font-weight: 900;
+  margin: 0;
+`;
+
+const H2 = styled.h1`
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
 `;
 
 const Grid = styled.div`
   display: grid;
-  width: 100%;
+  width: calc(100% - 1rem);
   grid-template-columns: 50% 50%;
   column-gap: 1rem;
   row-gap: 1rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
 `;
 
 const GridItem = styled.div`
   display: grid;
+`;
+
+const ChartContainer = styled.div`
+  display: flex;
+  padding: 1rem;
 `;
