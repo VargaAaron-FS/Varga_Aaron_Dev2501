@@ -1,3 +1,5 @@
+import React from "react";
+
 // Components
 import MyLogo from "./MyLogo";
 import MyAvatar from "./MyAvatar";

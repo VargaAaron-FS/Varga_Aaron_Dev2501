@@ -1,3 +1,5 @@
+import React from "react";
+
 // Import icons for nav
 import {
   MdDashboard,

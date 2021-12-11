@@ -1,6 +1,11 @@
+import React from "react";
+
+// Components
 import SideNav from "./components/SideNav";
 import MyHeader from "./components/MyHeader";
 import MyFooter from "./components/MyFooter";
+
+// Routing
 import { Routes, Route } from "react-router-dom";
 
 // Pages
@@ -30,23 +35,6 @@ export default function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="logout" element={<LogOut />} />
           </Routes>
-
-          {/* <div style={styles.dataContainer}>
-            <h1 style={styles.dashH1}>Dashboard</h1>
-
-          </div>
-          <div style={styles.dataContainer}>
-            <h1 style={styles.reportsH1}>Reports</h1>
-          </div>
-          <div style={styles.dataContainer}>
-            <h1 style={styles.incomeH1}>Income</h1>
-          </div>
-          <div style={styles.dataContainer}>
-            <h1 style={styles.savingsH1}>Savings</h1>
-          </div>
-          <div style={styles.dataContainer}>
-            <h1 style={styles.spendingH1}>Spending</h1>
-          </div> */}
         </main>
         <MyFooter />
       </div>
@@ -68,10 +56,10 @@ const styles = {
     backgroundColor: "#eee",
   },
   mainContainer: {
-    margin: "1rem",
     display: "flex",
     flexDirection: "column",
     rowGap: "1rem",
+    padding: ".25rem",
   },
   dataContainer: {
     display: "flex",
