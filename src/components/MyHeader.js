@@ -11,9 +11,11 @@ import { Link } from "react-router-dom";
 export default function MyHeader() {
   return (
     <header style={styles.headerContainer}>
-      <MyLogo />
+      <Link to="/dashboard" style={{textDecoration: "none",}} >
+        <MyLogo />
+      </Link>
       <nav style={styles.navContainer}>
-      <Link to="/alerts">
+        <Link to="/alerts">
           <MdNotifications style={styles.headerIcons} />
         </Link>
         <Link to="/settings">

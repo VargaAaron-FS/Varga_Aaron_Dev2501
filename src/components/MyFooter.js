@@ -31,7 +31,7 @@ const styles = {
     margin: "0",
     padding: "0",
     fontSize: "1rem",
-    color: "#fff",
+    color: "#eee",
     display: "flex",
     alignItems: "center",
   },
@@ -50,6 +50,6 @@ const styles = {
   footerIcons: {
     cursor: "pointer",
     fontSize: "1.5rem",
-    color: "#fff",
+    color: "#eee",
   },
 };
