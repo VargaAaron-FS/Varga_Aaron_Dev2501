@@ -10,11 +10,17 @@ export default function Dashboard() {
         </FlexboxItem>
         <FlexboxItem>
           <Paragraph>
-            Hello, Aaron! Here is your current financial summary.
+            Hello, Aaron!
           </Paragraph>
         </FlexboxItem>
         <FlexboxItem>
           <Grid>
+          <GridItem>
+              <H2 style={{ color: "#333" }}>Summary</H2>
+              <ChartContainer style={{ border: "2px solid #333" }}>
+                Chart goes here! (Pie)
+              </ChartContainer>
+            </GridItem>
             <GridItem>
               <H2 style={{ color: "#118ab2" }}>Reports</H2>
               <ChartContainer style={{ border: "2px solid #118ab2" }}>
@@ -60,6 +66,7 @@ const FlexboxItem = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1rem;
+  color: #333;
 `;
 
 const Section = styled.section`

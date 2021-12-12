@@ -9,7 +9,7 @@ export default function Income() {
           <H1 style={{ color: "#06d6a0" }}>Income</H1>
         </FlexboxItem>
         <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
+          <Paragraph>This is the Income page!</Paragraph>
         </FlexboxItem>
       </FlexboxContainer>
     </Section>
