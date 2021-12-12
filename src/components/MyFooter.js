@@ -1,20 +1,23 @@
+import React from "react";
+import styled from "styled-components";
+
 // Import icon(s)
 import { MdCopyright } from "react-icons/md";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function MyFooter() {
   return (
-    <footer style={styles.footerContainer}>
-        <p style={styles.footerP}>
-          <MdCopyright style={styles.copyIcon} /> 2021 Dollar Financial
-          Technology, LLC. All rights reserved.
-        </p>
-        <div style={styles.footerIconsContainer}>
-          <FaFacebook style={styles.footerIcons} />
-          <FaTwitter style={styles.footerIcons} />
-          <FaInstagram style={styles.footerIcons} />
-        </div>
-    </footer>
+    <Footer style={styles.footerContainer}>
+      <p style={styles.footerP}>
+        <MdCopyright style={styles.copyIcon} /> 2021 Dollar Financial
+        Technology, LLC. All rights reserved.
+      </p>
+      <div style={styles.footerIconsContainer}>
+        <FaFacebook style={styles.footerIcons} />
+        <FaTwitter style={styles.footerIcons} />
+        <FaInstagram style={styles.footerIcons} />
+      </div>
+    </Footer>
   );
 }
 
@@ -22,8 +25,6 @@ const styles = {
   footerContainer: {
     padding: "1rem",
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
     backgroundColor: "#333",
     marginTop: "auto",
   },
@@ -53,3 +54,14 @@ const styles = {
     color: "#eee",
   },
 };
+
+const Footer = styled.footer`
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+`;
