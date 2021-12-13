@@ -1,10 +1,11 @@
+import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import styled from "styled-components";
 
 const data = [
-  { name: "Income", value: 100 },
+  { name: "Income", value: 200 },
   { name: "Savings", value: 300 },
-  { name: "Spending", value: 600 },
+  { name: "Spending", value: 500 },
 ];
 
 const COLORS = ["#06d6a0", "#EA638C", "#ffcb1b"];
@@ -38,8 +39,8 @@ const renderCustomizedLabel = ({
 
 export default function MyPieChart(props) {
   return (
-    <div style={{ width: 300, height: 300, display: "flex", justifyContent: "center", }}>
-      <ResponsiveContainer>
+    <div style={{ width: 300, height: "auto", minHeight: 300, display: "flex", justifyContent: "center", }}>
+      <ResponsiveContainer debounce={300}>
         <PieChart>
           <Pie
             data={data}
@@ -115,6 +116,7 @@ const Legend = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: #333;
 `;
 
 const ColorIndicator = styled.span`

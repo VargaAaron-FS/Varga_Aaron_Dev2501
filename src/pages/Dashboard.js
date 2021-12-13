@@ -4,6 +4,7 @@ import styled from "styled-components";
 // Import chart
 import MyLineChart from "../components/charts/MyLineChart";
 import MyPieChart from "../components/charts/MyPieChart";
+import ReportsDataTable from "../components/charts/ReportsDataTable";
 
 export default function Dashboard() {
   return (
@@ -32,7 +33,7 @@ export default function Dashboard() {
             <GridItem>
               <H2 style={{ color: "#118ab2" }}>Reports</H2>
               <ChartContainer style={{ border: "2px solid #118ab2" }}>
-                Add table data here.
+                <ReportsDataTable />
               </ChartContainer>
             </GridItem>
             <GridItem>

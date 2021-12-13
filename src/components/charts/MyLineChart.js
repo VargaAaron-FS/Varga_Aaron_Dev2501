@@ -1,3 +1,4 @@
+import React from "react";
 import {
   LineChart,
   Line,
@@ -25,7 +26,7 @@ const data = [
 export default function MyLineChart(props) {
   return (
     <div style={{ width: "100%", height: 300 }}>
-      <ResponsiveContainer>
+      <ResponsiveContainer debounce={300}>
         <LineChart data={data}>
           <Line type="monotone" dataKey="Average" stroke={props.avgStroke} />
           <Line type="monotone" dataKey="Actual" stroke={props.actualStroke} />
