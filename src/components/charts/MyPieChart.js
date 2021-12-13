@@ -1,31 +1,126 @@
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import styled from "styled-components";
+
 const data = [
-  { name: "Jan", Average: 400, Actual: 2400 },
-  { name: "Feb", Average: 200, Actual: 600 },
-  { name: "Mar", Average: 200, Actual: 600 },
+  { name: "Income", value: 100 },
+  { name: "Savings", value: 300 },
+  { name: "Spending", value: 600 },
 ];
+
+const COLORS = ["#06d6a0", "#EA638C", "#ffcb1b"];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+  index,
+}) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      textAnchor={x > cx ? "start" : "end"}
+      dominantBaseline="central"
+    >
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
 
 export default function MyPieChart(props) {
   return (
-    <div style={{ width: "100%", height: 300 }}>
+    <div style={{ width: 300, height: 300, display: "flex", justifyContent: "center", }}>
       <ResponsiveContainer>
-        <LineChart data={data}>
-          <Line type="monotone" dataKey="Average" stroke={props.avgStroke} />
-          <Line type="monotone" dataKey="Actual" stroke={props.actualStroke} />
-          <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-        </LineChart>
+        <PieChart>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
+          </Pie>
+        </PieChart>
       </ResponsiveContainer>
+      <Legend>
+        <ul
+          style={{
+            listStyle: "none",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "1rem",
+          }}
+        >
+          <li
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <ColorIndicator
+              style={{ backgroundColor: "#06d6a0" }}
+            ></ColorIndicator>
+            Income
+          </li>
+          <li
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <ColorIndicator
+              style={{ backgroundColor: "#EA638C" }}
+            ></ColorIndicator>
+            Savings
+          </li>
+          <li
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <ColorIndicator
+              style={{ backgroundColor: "#ffcb1b" }}
+            ></ColorIndicator>
+            Spending
+          </li>
+        </ul>
+      </Legend>
     </div>
   );
 }
+
+const Legend = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const ColorIndicator = styled.span`
+  display: flex;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+`;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Import chart
 import MyLineChart from "../components/charts/MyLineChart";
+import MyPieChart from "../components/charts/MyPieChart";
 
 export default function Dashboard() {
   return (
@@ -18,8 +19,14 @@ export default function Dashboard() {
           <Grid>
             <GridItem>
               <H2 style={{ color: "#333" }}>Summary</H2>
-              <ChartContainer style={{ border: "2px solid #333" }}>
-                Chart goes here! (Pie)
+              <ChartContainer
+                style={{
+                  border: "2px solid #333",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <MyPieChart />
               </ChartContainer>
             </GridItem>
             <GridItem>
