@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Import chart
+import MyLineChart from "../components/charts/MyLineChart";
+
 export default function Dashboard() {
   return (
     <Section>
@@ -9,13 +12,11 @@ export default function Dashboard() {
           <H1 style={{ color: "#333" }}>Dashboard</H1>
         </FlexboxItem>
         <FlexboxItem>
-          <Paragraph>
-            Hello, Aaron!
-          </Paragraph>
+          <Paragraph>Hello, Aaron!</Paragraph>
         </FlexboxItem>
         <FlexboxItem>
           <Grid>
-          <GridItem>
+            <GridItem>
               <H2 style={{ color: "#333" }}>Summary</H2>
               <ChartContainer style={{ border: "2px solid #333" }}>
                 Chart goes here! (Pie)
@@ -24,7 +25,7 @@ export default function Dashboard() {
             <GridItem>
               <H2 style={{ color: "#118ab2" }}>Reports</H2>
               <ChartContainer style={{ border: "2px solid #118ab2" }}>
-                Chart goes here!
+                <MyLineChart />
               </ChartContainer>
             </GridItem>
             <GridItem>
