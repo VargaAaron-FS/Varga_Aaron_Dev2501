@@ -9,7 +9,7 @@ export default function Spending() {
           <H1 style={{ color: "#ffcb1b" }}>Spending</H1>
         </FlexboxItem>
         <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
+          <Paragraph>This is the Spending page!</Paragraph>
         </FlexboxItem>
       </FlexboxContainer>
     </Section>

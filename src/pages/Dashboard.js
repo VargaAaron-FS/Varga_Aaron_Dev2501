@@ -25,25 +25,25 @@ export default function Dashboard() {
             <GridItem>
               <H2 style={{ color: "#118ab2" }}>Reports</H2>
               <ChartContainer style={{ border: "2px solid #118ab2" }}>
-                <MyLineChart />
+                Add table data here.
               </ChartContainer>
             </GridItem>
             <GridItem>
               <H2 style={{ color: "#06d6a0" }}>Income</H2>
               <ChartContainer style={{ border: "2px solid #06d6a0" }}>
-                Chart goes here!
+                <MyLineChart avgStroke="#333" actualStroke="#06d6a0" />
               </ChartContainer>
             </GridItem>
             <GridItem>
               <H2 style={{ color: "#EA638C" }}>Savings</H2>
               <ChartContainer style={{ border: "2px solid #EA638C" }}>
-                Chart goes here!
+                <MyLineChart avgStroke="#333" actualStroke="#EA638C" />
               </ChartContainer>
             </GridItem>
             <GridItem>
               <H2 style={{ color: "#ffcb1b" }}>Spending</H2>
               <ChartContainer style={{ border: "2px solid #ffcb1b" }}>
-                Chart goes here!
+                <MyLineChart avgStroke="#333" actualStroke="#ffcb1b" />
               </ChartContainer>
             </GridItem>
           </Grid>

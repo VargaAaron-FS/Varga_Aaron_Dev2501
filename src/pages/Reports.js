@@ -9,7 +9,7 @@ export default function Reports() {
           <H1 style={{ color: "#118ab2" }}>Reports</H1>
         </FlexboxItem>
         <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
+          <Paragraph>This is the Reports page!</Paragraph>
         </FlexboxItem>
       </FlexboxContainer>
     </Section>

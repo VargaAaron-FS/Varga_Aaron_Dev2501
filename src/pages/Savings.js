@@ -9,7 +9,7 @@ export default function Savings() {
           <H1 style={{ color: "#EA638C" }}>Savings</H1>
         </FlexboxItem>
         <FlexboxItem>
-          <Paragraph>This is the Dashboard!</Paragraph>
+          <Paragraph>This is the Savings page!</Paragraph>
         </FlexboxItem>
       </FlexboxContainer>
     </Section>
