@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 // Components
 import SideNav from "./components/SideNav";
@@ -23,7 +24,7 @@ export default function App() {
       <SideNav />
       <div style={styles.headerMainContainer}>
         <MyHeader />
-        <main style={styles.mainContainer}>
+        <Main>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
@@ -34,7 +35,7 @@ export default function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="logout" element={<LogOut />} />
           </Routes>
-        </main>
+        </Main>
         <MyFooter />
       </div>
     </div>
@@ -54,10 +55,15 @@ const styles = {
     width: "100%",
     backgroundColor: "#eee",
   },
-  mainContainer: {
-    display: "flex",
-    flexDirection: "column",
-    rowGap: "1rem",
-    padding: ".25rem",
-  },
 };
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: .25rem;
+  min-height: calc(100vh - 146px);
+  @media (max-width: 768px) {
+    min-height: calc(100vh - 186px);
+  }
+`;

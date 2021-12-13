@@ -26,7 +26,6 @@ const styles = {
     padding: "1rem",
     display: "flex",
     backgroundColor: "#333",
-    marginTop: "auto",
   },
   footerP: {
     margin: "0",
@@ -58,6 +57,7 @@ const styles = {
 const Footer = styled.footer`
   flex-direction: row;
   justify-content: space-between;
+  margin-top: auto;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
