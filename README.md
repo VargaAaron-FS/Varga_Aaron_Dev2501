@@ -15,3 +15,5 @@ Web Development @ Full Sail University
 ### Modules 3 & 4
 
 #### 03_Routing - Adding React Router and useState to application
+
+#### 04_API - Using APIs, async/await, and other ES6 methods
