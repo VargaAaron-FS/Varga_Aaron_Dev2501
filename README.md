@@ -6,6 +6,12 @@ Web Development @ Full Sail University
 
 ## Application
 
-### 01_Components - Components created for application.
+### Modules 1 & 2
 
-### 02_
+#### 01_Components - Components created for application
+
+#### 02_CRUD - Basic functionality created for application
+
+### Modules 3 & 4
+
+#### 03_Routing - Adding React Router and useState to application
