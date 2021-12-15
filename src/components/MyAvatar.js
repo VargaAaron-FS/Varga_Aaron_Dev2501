@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 // import logo from "./logo.svg";
 
-export default function Header() {
+// import image
+
+export default function MyAvatar() {
   return (
     <AppContainer>
-      App!
+      Avatar!
     </AppContainer>
   );
 }

@@ -15,7 +15,9 @@ import {
 export default function SideNav() {
   return (
     <SideNavContainer>
-      <RiSettingsFill style={{ fontSize: "3rem" }} />
+      <LogoContainer>
+        <RiSettingsFill /> <LogoText>UI</LogoText>
+      </LogoContainer>
       <Nav>
         <Anchor href="/">
           <RiDashboardFill style={{ fontSize: "1.5rem" }} /> Dashboard
@@ -44,7 +46,6 @@ const SideNavContainer = styled.div`
   background: blue;
   height: calc(100vh - 4rem);
   row-gap: 3rem;
-  color: white;
 `;
 
 const Nav = styled.nav`
@@ -64,4 +65,18 @@ const Anchor = styled.a`
   &&:hover {
     opacity: 0.75;
   }
+`;
+
+const LogoContainer = styled.div`
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: center;
+`;
+
+const LogoText = styled.h1`
+  font-size: 1.5rem;
+  font-weight: 700;
 `;
