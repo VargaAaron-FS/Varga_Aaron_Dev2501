@@ -1,12 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import MyAvatar from "./MyAvatar";
 
-import {
-  RiNotificationBadgeFill,
-  RiArrowDownSFill
-} from "react-icons/ri";
+import { RiNotificationFill, RiArrowDownSFill } from "react-icons/ri";
 
 // import logo from "./logo.svg";
 
@@ -15,9 +12,22 @@ export default function MyHeader() {
     <Header>
       <ViewTitle>View Title</ViewTitle>
       <HeaderNav>
-        <Anchor href="/"><RiNotificationBadgeFill /></Anchor>
-        <Anchor href="/"><MyAvatar /></Anchor>
-        <Anchor href="/"><RiArrowDownSFill /></Anchor>
+        <Anchor href="/">
+          <RiNotificationFill style={{ fontSize: "1.5rem" }} />
+        </Anchor>
+        <Anchor href="/">
+          <MyAvatar />
+        </Anchor>
+        <Anchor href="/">
+          <RiArrowDownSFill
+            style={{
+              fontSize: "2.25rem",
+              padding: "0",
+              margin: "0",
+              marginLeft: "-.45rem",
+            }}
+          />
+        </Anchor>
       </HeaderNav>
     </Header>
   );
@@ -26,11 +36,12 @@ export default function MyHeader() {
 const Header = styled.header`
   display: flex;
   flex-direction: row;
-  padding: 2rem 3rem;
+  padding: 1.25rem 3rem;
   background: white;
-  border-bottom: .25rem solid blue;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
 `;
 
 const ViewTitle = styled.h2`
@@ -41,6 +52,7 @@ const ViewTitle = styled.h2`
 
 const HeaderNav = styled.nav`
   display: flex;
+  align-items: center;
   flex-direction: row;
   column-gap: 1rem;
 `;
@@ -50,5 +62,5 @@ const Anchor = styled.a`
   flex-direction: row;
   color: blue;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 `;

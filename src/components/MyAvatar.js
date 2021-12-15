@@ -7,12 +7,20 @@ import styled from 'styled-components';
 
 export default function MyAvatar() {
   return (
-    <AppContainer>
-      Avatar!
-    </AppContainer>
+    <AvatarContainer>
+      A
+    </AvatarContainer>
   );
 }
 
-const AppContainer = styled.div`
+const AvatarContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
 `;

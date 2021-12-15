@@ -39,13 +39,15 @@ export default function SideNav() {
   );
 }
 
-const SideNavContainer = styled.div`
+const SideNavContainer = styled.aside`
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem 2rem 3rem;
   background: blue;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3rem);
   row-gap: 3rem;
+  z-index: 5;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .25);
 `;
 
 const Nav = styled.nav`
