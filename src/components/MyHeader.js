@@ -41,7 +41,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 `;
 
 const ViewTitle = styled.h2`

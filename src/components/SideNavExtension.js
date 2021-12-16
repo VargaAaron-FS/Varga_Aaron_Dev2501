@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import {
   RiEditFill,
@@ -24,7 +24,8 @@ export default function SideNavExtension() {
           <RiPriceTagFill style={{ fontSize: "1.5rem" }} /> Choose Plan
         </Anchor>
         <Anchor href="/">
-          <RiShieldCheckFill style={{ fontSize: "1.5rem" }} /> Password & Security
+          <RiShieldCheckFill style={{ fontSize: "1.5rem" }} /> Password &
+          Security
         </Anchor>
       </Nav>
     </SideNavExtContainer>
@@ -37,7 +38,7 @@ const SideNavExtContainer = styled.aside`
   padding: 2.25rem 3rem;
   color: blue;
   height: calc(100vh - 169px);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 0;
 `;
 

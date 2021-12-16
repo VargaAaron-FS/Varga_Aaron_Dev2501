@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 // import logo from "./logo.svg";
 
-// import image
-
 export default function MyAvatar() {
   return (
     <AvatarContainer>

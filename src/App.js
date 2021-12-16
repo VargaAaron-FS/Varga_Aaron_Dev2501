@@ -14,12 +14,10 @@ export default function App() {
       <SideNav />
       <MainContainer>
         <MyHeader />
-        <div style={{ display: "flex", flexDirection: "row", }}>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <SideNavExtension />
           <ContentContainer>
-            <ContentCard>
-              Content Card!
-            </ContentCard>
+            <ContentCard>Content Card!</ContentCard>
           </ContentContainer>
         </div>
       </MainContainer>
@@ -49,7 +47,7 @@ const ContentContainer = styled.div`
 const ContentCard = styled.div`
   padding: 2rem 3rem;
   background: white;
-  border-radius: .25rem;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1);
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
 `;
