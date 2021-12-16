@@ -7,10 +7,10 @@ import { RiNotificationFill, RiArrowDownSFill } from "react-icons/ri";
 
 // import logo from "./logo.svg";
 
-export default function MyHeader() {
+export default function MyHeader(props) {
   return (
     <Header>
-      <ViewTitle>View Title</ViewTitle>
+      <ViewTitle>{props.pageTitle}</ViewTitle>
       <HeaderNav>
         <Anchor href="/">
           <RiNotificationFill style={{ fontSize: "1.5rem" }} />

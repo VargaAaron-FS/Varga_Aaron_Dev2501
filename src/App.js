@@ -13,7 +13,7 @@ export default function App() {
     <AppContainer>
       <SideNav />
       <MainContainer>
-        <MyHeader />
+        <MyHeader pageTitle="Page Title" />
         <div style={{ display: "flex", flexDirection: "row" }}>
           <SideNavExtension />
           <ContentContainer>
