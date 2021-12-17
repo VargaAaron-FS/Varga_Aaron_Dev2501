@@ -19,7 +19,7 @@ export default function App() {
       <AppContainer>
         <SideNav />
         <MainContainer>
-          <MyHeader />
+          <MyHeader pageTitle="Page Title" />
           <div style={{ display: "flex", flexDirection: "row" }}>
             <SideNavExtension />
             <ContentContainer>
@@ -57,7 +57,7 @@ const ContentContainer = styled.div`
 `;
 
 const ContentCard = styled.div`
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 3rem 2rem;
   background: white;
   border-radius: 0.25rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);

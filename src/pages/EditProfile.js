@@ -4,8 +4,6 @@ import styled from "styled-components";
 import MyAvatar from "../components/MyAvatar";
 import MyButton from "../components/buttons/MyButton";
 
-import { RiEditBoxFill } from "react-icons/ri";
-
 export default function EditProfile() {
   return (
     <PagesContainer>
@@ -23,21 +21,51 @@ export default function EditProfile() {
           </FormItem>
           <FormItem>
             <FormLabel>Last Name</FormLabel>
-            <FormInput type="text" placeholder="First Name" />
+            <FormInput type="text" placeholder="Last Name" />
           </FormItem>
         </FormGroup>
         <FormGroup>
           <FormItem>
-            <FormLabel>First Name</FormLabel>
-            <FormInput type="text" placeholder="First Name" />
+            <FormLabel>Email</FormLabel>
+            <FormInput type="email" placeholder="Email" />
           </FormItem>
           <FormItem>
-            <FormLabel>Last Name</FormLabel>
-            <FormInput type="text" placeholder="First Name" />
+            <FormLabel>Number</FormLabel>
+            <FormInput type="tel" placeholder="Number" />
+          </FormItem>
+        </FormGroup>
+        <FormGroup>
+          <FormItem>
+            <FormLabel>Address</FormLabel>
+            <FormInput type="text" placeholder="Address" />
+          </FormItem>
+          <FormItem>
+            <FormLabel>City</FormLabel>
+            <FormInput type="text" placeholder="City" />
+          </FormItem>
+        </FormGroup>
+        <FormGroup>
+          <FormItem>
+            <FormLabel>State</FormLabel>
+            <FormInput type="text" placeholder="State" />
+          </FormItem>
+          <FormItem>
+            <FormLabel>Zip Code</FormLabel>
+            <FormInput type="number" placeholder="Zip Code" />
+          </FormItem>
+        </FormGroup>
+        <FormGroup>
+          <FormItem>
+            <FormLabel>Country</FormLabel>
+            <FormInput type="text" placeholder="Country" />
+          </FormItem>
+          <FormItem>
+            <FormLabel>Password</FormLabel>
+            <FormInput type="password" placeholder="Password" />
           </FormItem>
         </FormGroup>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <MyButton buttonType="submit" buttonTitle="Submit" />
+          <MyButton buttonType="submit" buttonTitle="Save" />
         </div>
       </Form>
     </PagesContainer>
@@ -76,12 +104,19 @@ const FormGroup = styled.div`
   display: flex;
   flex-direction: row;
   column-gap: 2rem;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 `;
 
 const FormItem = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const FormLabel = styled.label`
