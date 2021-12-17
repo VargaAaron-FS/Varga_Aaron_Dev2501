@@ -10,8 +10,6 @@ import {
   RiSettings5Fill,
 } from "react-icons/ri";
 
-// import logo from "./logo.svg";
-
 export default function SideNav() {
   return (
     <SideNavContainer>

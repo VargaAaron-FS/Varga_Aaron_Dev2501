@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-// import logo from "./logo.svg";
-
 import avatarImgSrc from "../images/av-avatar-photo.png";
 
 export default function MyAvatar(props) {
   return (
     <AvatarContainer>
-      <img src={avatarImgSrc} alt="Avatar Photo" width={props.width} height={props.height} />
+      <img
+        src={avatarImgSrc}
+        alt="Avatar Photo"
+        width={props.width}
+        height={props.height}
+      />
     </AvatarContainer>
   );
 }

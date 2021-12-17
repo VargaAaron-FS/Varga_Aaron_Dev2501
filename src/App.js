@@ -23,7 +23,7 @@ export default function App() {
         <SideNav />
         <MainContainer>
           <MyHeader pageTitle="Profile" />
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <UtilityContainer>
             <SideNavExtension />
             <ContentContainer>
               <ContentCard>
@@ -32,7 +32,7 @@ export default function App() {
                 </Routes>
               </ContentCard>
             </ContentContainer>
-          </div>
+          </UtilityContainer>
         </MainContainer>
       </AppContainer>
       <MyFooter />
@@ -59,9 +59,14 @@ const ContentContainer = styled.div`
 `;
 
 const ContentCard = styled.div`
-  padding: 2rem 3rem 3rem 2rem;
+  padding: 2rem 3rem 3rem 3rem;
   background: white;
   border-radius: 0.25rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
+`;
+
+const UtilityContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

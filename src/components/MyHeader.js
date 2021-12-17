@@ -5,8 +5,6 @@ import MyAvatar from "./MyAvatar";
 
 import { RiNotificationFill, RiArrowDownSFill } from "react-icons/ri";
 
-// import logo from "./logo.svg";
-
 export default function MyHeader(props) {
   return (
     <Header>

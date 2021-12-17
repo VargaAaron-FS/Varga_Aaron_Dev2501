@@ -8,8 +8,6 @@ import {
   RiShieldCheckFill,
 } from "react-icons/ri";
 
-// import logo from "./logo.svg";
-
 export default function SideNavExtension() {
   return (
     <SideNavExtContainer>
