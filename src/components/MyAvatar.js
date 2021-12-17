@@ -5,10 +5,10 @@ import styled from "styled-components";
 
 import avatarImgSrc from "../images/av-avatar-photo.png";
 
-export default function MyAvatar() {
+export default function MyAvatar(props) {
   return (
     <AvatarContainer>
-      <img src={avatarImgSrc} alt="Avatar Photo" style={{ width: "50px" }} />
+      <img src={avatarImgSrc} alt="Avatar Photo" width={props.width} height={props.height} />
     </AvatarContainer>
   );
 }
@@ -20,8 +20,6 @@ const AvatarContainer = styled.div`
   background: #eee;
   color: white;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
   font-weight: 700;
-  border: 2px solid blue;
+  border: 2px solid #333;
 `;

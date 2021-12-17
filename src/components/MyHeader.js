@@ -7,16 +7,16 @@ import { RiNotificationFill, RiArrowDownSFill } from "react-icons/ri";
 
 // import logo from "./logo.svg";
 
-export default function MyHeader(props) {
+export default function MyHeader() {
   return (
     <Header>
-      <ViewTitle>{props.pageTitle}</ViewTitle>
+      <ViewTitle>Page Title</ViewTitle>
       <HeaderNav>
         <Anchor href="/">
           <RiNotificationFill style={{ fontSize: "1.5rem" }} />
         </Anchor>
         <Anchor href="/">
-          <MyAvatar />
+          <MyAvatar height="50px" width="50px" />
         </Anchor>
         <Anchor href="/">
           <RiArrowDownSFill
@@ -46,7 +46,7 @@ const Header = styled.header`
 
 const ViewTitle = styled.h2`
   font-size: 1.25rem;
-  color: blue;
+  color: #333;
   font-weight: 700;
 `;
 
@@ -60,7 +60,7 @@ const HeaderNav = styled.nav`
 const Anchor = styled.a`
   display: flex;
   flex-direction: row;
-  color: blue;
+  color: #333;
   text-decoration: none;
   font-size: 1rem;
 `;

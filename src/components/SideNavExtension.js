@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import {
-  RiEditFill,
+  RiEditBoxFill,
   RiNotificationFill,
   RiPriceTagFill,
   RiShieldCheckFill,
@@ -15,7 +15,7 @@ export default function SideNavExtension() {
     <SideNavExtContainer>
       <Nav>
         <Anchor href="/">
-          <RiEditFill style={{ fontSize: "1.5rem" }} /> Edit Profile
+          <RiEditBoxFill style={{ fontSize: "1.5rem" }} /> Edit Profile
         </Anchor>
         <Anchor href="/">
           <RiNotificationFill style={{ fontSize: "1.5rem" }} /> Notifications
@@ -37,7 +37,6 @@ const SideNavExtContainer = styled.aside`
   background: #fff;
   padding: 2.25rem 3rem;
   color: blue;
-  height: calc(100vh - 169px);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 0;
 `;
@@ -50,13 +49,10 @@ const Nav = styled.nav`
 
 const Anchor = styled.a`
   text-decoration: none;
-  color: blue;
+  color: #333;
   font-weight: 700;
   font-size: 1rem;
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  &&:hover {
-    opacity: 0.5;
-  }
 `;

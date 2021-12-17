@@ -1,27 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 
-// import logo from "./logo.svg";
-
 // Components
 import SideNav from "./components/SideNav";
 import MyHeader from "./components/MyHeader";
 import SideNavExtension from "./components/SideNavExtension";
+import MyFooter from "./components/MyFooter";
+
+// Pages
+import EditProfile from "./pages/EditProfile";
+
+// Routing
+import { Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <AppContainer>
-      <SideNav />
-      <MainContainer>
-        <MyHeader pageTitle="Page Title" />
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <SideNavExtension />
-          <ContentContainer>
-            <ContentCard>Content Card!</ContentCard>
-          </ContentContainer>
-        </div>
-      </MainContainer>
-    </AppContainer>
+    <div style={{display: "flex", flexDirection:"column", flexGrow: "1", }}>
+      <AppContainer>
+        <SideNav />
+        <MainContainer>
+          <MyHeader />
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <SideNavExtension />
+            <ContentContainer>
+              <ContentCard>
+                <Routes>
+                  <Route path="/" element={<EditProfile />} />
+                  <Route path="profile" element={<EditProfile />} />
+                </Routes>
+              </ContentCard>
+            </ContentContainer>
+          </div>
+        </MainContainer>
+      </AppContainer>
+      <MyFooter />
+    </div>
   );
 }
 
@@ -32,9 +45,8 @@ const AppContainer = styled.div`
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  height: 100vh;
   background: white;
+  flex-grow: 1;
 `;
 
 const ContentContainer = styled.div`

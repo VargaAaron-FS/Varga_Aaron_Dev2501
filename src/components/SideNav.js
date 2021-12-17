@@ -44,7 +44,6 @@ const SideNavContainer = styled.aside`
   flex-direction: column;
   padding: 1rem 3rem 2rem 3rem;
   background: blue;
-  height: calc(100vh - 3rem);
   row-gap: 3rem;
   z-index: 5;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
@@ -64,9 +63,6 @@ const Anchor = styled.a`
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  &&:hover {
-    opacity: 0.75;
-  }
 `;
 
 const LogoContainer = styled.div`
