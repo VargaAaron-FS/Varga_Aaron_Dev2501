@@ -72,7 +72,7 @@ export default function EditProfile() {
   );
 }
 
-const PagesContainer = styled.div`
+const PagesContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;

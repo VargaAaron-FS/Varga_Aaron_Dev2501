@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // Components
@@ -14,19 +14,21 @@ import EditProfile from "./pages/EditProfile";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
+  const [userData] = useState([]);
+  const [isLoaded] = useState([{ isLoaded: true }]);
+
   return (
-    <div style={{display: "flex", flexDirection:"column", flexGrow: "1", }}>
+    <div style={{ display: "flex", flexDirection: "column", flexGrow: "1" }}>
       <AppContainer>
         <SideNav />
         <MainContainer>
-          <MyHeader pageTitle="Page Title" />
+          <MyHeader pageTitle="Profile" />
           <div style={{ display: "flex", flexDirection: "row" }}>
             <SideNavExtension />
             <ContentContainer>
               <ContentCard>
                 <Routes>
                   <Route path="/" element={<EditProfile />} />
-                  <Route path="profile" element={<EditProfile />} />
                 </Routes>
               </ContentCard>
             </ContentContainer>
