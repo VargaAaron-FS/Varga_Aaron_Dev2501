@@ -29,6 +29,7 @@ export default function App() {
               <ContentCard>
                 <Routes>
                   <Route path="/" element={<EditProfile />} />
+                  <Route path="/EditProfile" element={<EditProfile />} />
                 </Routes>
               </ContentCard>
             </ContentContainer>

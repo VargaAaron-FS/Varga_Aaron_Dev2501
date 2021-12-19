@@ -40,7 +40,7 @@ export default function SideNav() {
 const SideNavContainer = styled.aside`
   display: flex;
   flex-direction: column;
-  padding: 1rem 3rem 2rem 3rem;
+  padding: .85rem 3rem 2rem 3rem;
   background: blue;
   row-gap: 3rem;
   z-index: 5;

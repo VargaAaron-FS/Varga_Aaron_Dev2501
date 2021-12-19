@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import MyAvatar from "./MyAvatar";
@@ -13,9 +14,9 @@ export default function MyHeader(props) {
         <Anchor href="/">
           <RiNotificationFill style={{ fontSize: "1.5rem" }} />
         </Anchor>
-        <Anchor href="/">
+        <Link to="/EditProfile">
           <MyAvatar height="50px" width="50px" />
-        </Anchor>
+        </Link>
         <Anchor href="/">
           <RiArrowDownSFill
             style={{
