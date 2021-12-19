@@ -32,11 +32,15 @@ export default function EditProfile(props) {
                     fName={userData.name.first}
                     lName={userData.name.last}
                     username={userData.login.username}
-                    street={userData.location.street.number}
+                    streetNum={userData.location.street.number}
+                    streetName={userData.location.street.name}
+                    city={userData.location.city}
                     state={userData.location.state}
                     zipCode={userData.location.postcode}
+                    country={userData.location.country}
                     email={userData.email}
                     phone={userData.phone}
+                    password={userData.login.password}
       />}
     </PagesContainer>
   );

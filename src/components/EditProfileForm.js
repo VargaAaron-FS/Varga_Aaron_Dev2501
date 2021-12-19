@@ -4,6 +4,17 @@ import React from "react";
 import MyButton from "../components/buttons/MyButton";
 
 export default function EditProfileForm(props) {
+  function showPass() {
+    let passInput = document.getElementById("password");
+    let passBtn = document.getElementById("passBtn");
+    if (passInput.type === "password") {
+      passInput.type = "text";
+      passBtn.innerText = "Hide";
+    } else {
+      passInput.type = "password";
+      passBtn.innerText = "Show";
+    }
+  }
 
   return (
     <PagesContainer>
@@ -11,55 +22,109 @@ export default function EditProfileForm(props) {
         <FormGroup>
           <FormItem>
             <FormLabel>First Name</FormLabel>
-            <FormInput type="text" value={props.fName} placeholder="First Name" readOnly />
+            <FormInput
+              type="text"
+              placeholder="First Name"
+              value={props.fName}
+              readOnly
+            />
           </FormItem>
           <FormItem>
             <FormLabel>Last Name</FormLabel>
-            <FormInput type="text" placeholder="Last Name" />
+            <FormInput
+              type="text"
+              placeholder="Last Name"
+              value={props.lName}
+              readOnly
+            />
           </FormItem>
         </FormGroup>
         <FormGroup>
           <FormItem>
             <FormLabel>Email</FormLabel>
-            <FormInput type="email" placeholder="Email" />
+            <FormInput
+              type="email"
+              placeholder="Email"
+              value={props.email}
+              readOnly
+            />
           </FormItem>
           <FormItem>
             <FormLabel>Number</FormLabel>
-            <FormInput type="tel" placeholder="Number" />
+            <FormInput
+              type="tel"
+              placeholder="Number"
+              value={props.phone}
+              readOnly
+            />
           </FormItem>
         </FormGroup>
         <FormGroup>
           <FormItem>
             <FormLabel>Address</FormLabel>
-            <FormInput type="text" placeholder="Address" />
+            <FormInput
+              type="text"
+              placeholder="Address"
+              value={`${props.streetNum} ${props.streetName}`}
+              readOnly
+            />
           </FormItem>
           <FormItem>
             <FormLabel>City</FormLabel>
-            <FormInput type="text" placeholder="City" />
+            <FormInput
+              type="text"
+              placeholder="City"
+              value={props.city}
+              readOnly
+            />
           </FormItem>
         </FormGroup>
         <FormGroup>
           <FormItem>
             <FormLabel>State</FormLabel>
-            <FormInput type="text" placeholder="State" />
+            <FormInput
+              type="text"
+              placeholder="State"
+              value={props.state}
+              readOnly
+            />
           </FormItem>
           <FormItem>
             <FormLabel>Zip Code</FormLabel>
-            <FormInput type="number" placeholder="Zip Code" />
+            <FormInput
+              type="number"
+              placeholder="Zip Code"
+              value={props.zipCode}
+              readOnly
+            />
           </FormItem>
         </FormGroup>
         <FormGroup>
           <FormItem>
             <FormLabel>Country</FormLabel>
-            <FormInput type="text" placeholder="Country" />
+            <FormInput
+              type="text"
+              placeholder="Country"
+              value={props.country}
+              readOnly
+            />
           </FormItem>
           <FormItem>
             <FormLabel>Password</FormLabel>
-            <FormInput type="password" placeholder="Password" />
+            <FormInput
+              id="password"
+              type="password"
+              placeholder="Password"
+              value={props.password}
+              readOnly
+            />
+            <ShowPassButton type="button" id="passBtn" onClick={showPass}>
+              Show
+            </ShowPassButton>
           </FormItem>
         </FormGroup>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <MyButton buttonType="submit" buttonTitle="Save" />
+          <MyButton buttonType="button" buttonTitle="Edit" />
         </div>
       </Form>
     </PagesContainer>
@@ -116,4 +181,17 @@ const FormInput = styled.input`
   padding: 0.5rem;
   border: 2px solid #eee;
   border-radius: 0.25rem;
+`;
+
+const ShowPassButton = styled.button`
+  display: flex;
+  padding: 0.25rem .5rem;
+  background: #eee;
+  border-radius: 0.25rem;
+  border: 1px solid #aaa;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 0.5rem;
+  font-weight: 400;
 `;
