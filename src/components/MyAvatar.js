@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import avatarImgSrc from "../images/av-avatar-photo.png";
-
 export default function MyAvatar(props) {
   return (
     <AvatarContainer>
       <img
-        src={avatarImgSrc}
         alt="Avatar Photo"
         width={props.width}
         height={props.height}
+        src={props.avatar}
+        style={{borderRadius: "50%",}}
       />
     </AvatarContainer>
   );
@@ -25,4 +24,5 @@ const AvatarContainer = styled.div`
   border-radius: 50%;
   font-weight: 700;
   border: 2px solid #333;
+  cursor: pointer;
 `;

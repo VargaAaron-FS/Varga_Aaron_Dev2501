@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -7,6 +7,23 @@ import MyAvatar from "./MyAvatar";
 import { RiNotificationFill, RiArrowDownSFill } from "react-icons/ri";
 
 export default function MyHeader(props) {
+  // Declare states
+  const [userData, setuserData] = useState(null);
+
+  useEffect(() => {
+    async function fetchAPI() {
+      // Grab API data
+      const res = await fetch("https://randomuser.me/api/");
+      // Convert it to usable data in JS
+      const data = await res.json();
+      // Store data
+      const [user] = data.results;
+      // Set data/update data
+      setuserData(user);
+    }
+    fetchAPI();
+  }, []);
+
   return (
     <Header>
       <ViewTitle>{props.pageTitle}</ViewTitle>
@@ -15,7 +32,13 @@ export default function MyHeader(props) {
           <RiNotificationFill style={{ fontSize: "1.5rem" }} />
         </Anchor>
         <Link to="/EditProfile">
-          <MyAvatar height="50px" width="50px" />
+        {userData && (
+            <MyAvatar
+            avatar={userData.picture.large}
+            width="50px"
+            height="50px"
+            />
+          )}
         </Link>
         <Anchor href="/">
           <RiArrowDownSFill

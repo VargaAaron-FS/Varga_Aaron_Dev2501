@@ -4,6 +4,7 @@ import React from "react";
 import MyButton from "../components/buttons/MyButton";
 
 export default function EditProfileForm(props) {
+  // Show/hide function for password input
   function showPass() {
     let passInput = document.getElementById("password");
     let passBtn = document.getElementById("passBtn");
@@ -185,7 +186,7 @@ const FormInput = styled.input`
 
 const ShowPassButton = styled.button`
   display: flex;
-  padding: 0.25rem .5rem;
+  padding: 0.25rem 0.5rem;
   background: #eee;
   border-radius: 0.25rem;
   border: 1px solid #aaa;

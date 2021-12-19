@@ -10,10 +10,13 @@ export default function EditProfile(props) {
 
   useEffect(() => {
     async function fetchAPI() {
+      // Grab API data
       const res = await fetch("https://randomuser.me/api/");
+      // Convert it to usable data in JS
       const data = await res.json();
+      // Store data
       const [user] = data.results;
-
+      // Set data/update data
       setuserData(user);
     }
     fetchAPI();
@@ -23,25 +26,31 @@ export default function EditProfile(props) {
     <PagesContainer>
       <PageHeaderContainer>
         <PageTitle>Edit Profile</PageTitle>
-        <AvatarContainer>
-          <MyAvatar width="100px" height="100px" />
-        </AvatarContainer>
+        {userData && (
+          <MyAvatar
+            avatar={userData.picture.large}
+            width="100px"
+            height="100px"
+          />
+        )}
       </PageHeaderContainer>
-      {userData && <EditProfileForm
-                    avatar={userData.picture.large}
-                    fName={userData.name.first}
-                    lName={userData.name.last}
-                    username={userData.login.username}
-                    streetNum={userData.location.street.number}
-                    streetName={userData.location.street.name}
-                    city={userData.location.city}
-                    state={userData.location.state}
-                    zipCode={userData.location.postcode}
-                    country={userData.location.country}
-                    email={userData.email}
-                    phone={userData.phone}
-                    password={userData.login.password}
-      />}
+      {/* Passing API data through props */}
+      {userData && (
+        <EditProfileForm
+          fName={userData.name.first}
+          lName={userData.name.last}
+          username={userData.login.username}
+          streetNum={userData.location.street.number}
+          streetName={userData.location.street.name}
+          city={userData.location.city}
+          state={userData.location.state}
+          zipCode={userData.location.postcode}
+          country={userData.location.country}
+          email={userData.email}
+          phone={userData.phone}
+          password={userData.login.password}
+        />
+      )}
     </PagesContainer>
   );
 }
@@ -64,10 +73,4 @@ const PageTitle = styled.h2`
   font-size: 1.5rem;
   color: #333;
   font-weight: 700;
-`;
-
-const AvatarContainer = styled.div`
-  width: 100px;
-  position: relative;
-  cursor: pointer;
 `;
