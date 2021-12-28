@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // Components
@@ -14,8 +14,8 @@ import EditProfile from "./pages/EditProfile";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
-  const [userData] = useState([]);
-  const [isLoaded] = useState([{ isLoaded: true }]);
+  // const [userData] = useState([]);
+  // const [isLoaded] = useState([{ isLoaded: true }]);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", flexGrow: "1" }}>

@@ -5,7 +5,7 @@ export default function MyAvatar(props) {
   return (
     <AvatarContainer>
       <img
-        alt="Avatar Photo"
+        alt="Avatar"
         width={props.width}
         height={props.height}
         src={props.avatar}
